@@ -9,10 +9,11 @@ Every piece on the shelf is one folder in `shelf/`. Tags are free: whatever you 
 ### 1. A notebook, note or tutorial
 
 1. Copy `shelf/_template/` to `shelf/<yyyy-mm-short-name>/` (folders starting with `_` are never published).
-2. Edit the first cell of `index.ipynb`: `title`, `description`, `date`, `type` (notebook, note, tutorial or tool), `nb` (next number), `categories` (your tags).
-3. Write and **run** the notebook so its charts are saved in the file. The site shows the saved outputs; it never re-runs your code.
-4. Put `replication.xlsx` and any data files in the same folder.
-5. Push:
+2. Edit the first cell of `index.ipynb`: `title`, `description` (one line), `date`, `type` (notebook, note, tutorial or tool), `nb` (next number), `categories` (your tags), and optionally `note` (one short line under the title). These fill the page header automatically.
+3. Follow the template's shape: under each heading, 2–3 key-point bullets, then one short paragraph, then the chart. Put *What this doesn't tell us* and *Questions I still have* before *Rebuild it in Excel*.
+4. Write and **run** the notebook so its charts are saved in the file. The site shows the saved outputs; it never re-runs your code.
+5. Put `replication.xlsx` and any data files in the same folder.
+6. Push:
 
    ```bash
    git add shelf/<folder>

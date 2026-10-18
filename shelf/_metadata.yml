@@ -1,0 +1,6 @@
+# Applies to every piece on the shelf.
+date-format: "D MMM YYYY"
+format:
+  html:
+    template-partials:
+      - ../_includes/title-block.html

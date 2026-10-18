@@ -1,0 +1,11 @@
+<header id="title-block-header" class="quarto-title-block la-piece-head">
+<div class="la-kicker">$if(nb)$<span class="la-nb">$nb$</span>$endif$$if(type)$<span>$type$</span>$endif$$if(date)$<span>·</span><span>$date$</span>$endif$</div>
+<h1 class="title">$title$</h1>
+$if(description)$<p class="la-piece-desc">$description$</p>$endif$
+$if(note)$<p class="la-piece-note">$note$</p>$endif$
+<div class="la-piece-meta">
+$for(categories)$<a class="la-tag" href="/index.html#category=$categories$">#$categories$</a>$endfor$
+$if(notebook)$<a class="la-chip" href="$notebook$?download" download="$notebook$">.ipynb</a>$endif$
+$if(excel)$<a class="la-chip" href="$excel$" download>.xlsx</a>$endif$
+</div>
+</header>
