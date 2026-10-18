@@ -15,13 +15,15 @@ const tags = Object.keys(counts).sort();
 <% for (const item of items) {
 const isLink = /^https?:/.test(item.path || '');
 const type = isLink ? 'link' : (item.type || 'notebook');
-const badge = isLink ? 'link ↗' : (item.interactive ? 'interactive' : type);
+const short = { 'TL Economic Intelligence': 'TLEI' };
+const badge = isLink ? ((short[item.where] || item.where || 'link') + ' ↗') : (item.interactive ? 'interactive' : type);
 %>
-<a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener"<% } %> <%= metadataAttrs(item) %>>
+<a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener" aria-label="<%= item.title %> (opens on <%= item.where || 'another site' %>)"<% } %> <%= metadataAttrs(item) %>>
 <span class="nb"><%= item.nb || '' %></span>
 <span>
 <span class="title"><%= item.title %></span>
-<span class="meta"><%= item.date %></span>
+<% if (item.description) { %><span class="desc"><%= item.description %></span>
+<% } %><span class="meta"><%= item.date %></span>
 </span>
 <span class="badge-type<%= badge === 'interactive' ? ' is-interactive' : '' %>"><%= badge %></span>
 </a>
