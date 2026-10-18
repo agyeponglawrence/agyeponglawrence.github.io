@@ -58,13 +58,18 @@ Hi, welcome to my playground. I'm Lawrence.<br>
 :::
 
 ::: {.la-hi}
-I'm an economist who likes to show the working. [More about me →](about.qmd)
-
 ```{=html}
+<p class="la-hi-lead">The kettle's on.</p>
+<p class="la-hi-sub">Get new notebooks in your inbox, or just say hello.</p>
 <form class="la-hi-form" action="https://ajaypong.substack.com/subscribe" method="get" target="_blank">
-  <label for="subscribe-email">New notebooks in your inbox.</label>
-  <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" required>
+  <label for="subscribe-email" class="visually-hidden-label">Your email</label>
+  <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
   <button type="submit" class="la-btn">Subscribe</button>
 </form>
+<p class="la-hi-links">Or find me on
+<a href="https://www.linkedin.com/in/agyeponglawrence" target="_blank" rel="noopener">LinkedIn</a> ·
+<a href="mailto:agyeponglawrence101@gmail.com">Email</a> ·
+<a href="https://ajaypong.substack.com" target="_blank" rel="noopener">Substack</a> ·
+<a href="https://github.com/agyeponglawrence" target="_blank" rel="noopener">GitHub</a></p>
 ```
 :::
