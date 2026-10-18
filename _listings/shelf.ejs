@@ -1,0 +1,32 @@
+```{=html}
+<%
+// Every piece: notebooks and notes in shelf/*/ plus link cards from shelf/links.yml.
+// Tags come from each item's `categories`; the filter bar is built from whatever tags exist.
+const counts = {};
+for (const item of items) for (const t of (item.categories || [])) counts[t] = (counts[t] || 0) + 1;
+const tags = Object.keys(counts).sort();
+%>
+<div class="la-tags quarto-listing-category" role="group" aria-label="Filter by tag">
+<button type="button" class="quarto-listing-category-title" aria-pressed="true">all · <%= items.length %></button>
+<% for (const t of tags) { %><button type="button" class="category" aria-pressed="false" data-category="<%- utils.b64encode(t) %>">#<%= t %> · <%= counts[t] %></button>
+<% } %>
+</div>
+<div class="la-shelf list">
+<% for (const item of items) {
+const isLink = /^https?:/.test(item.path || '');
+const type = isLink ? 'link' : (item.type || 'notebook');
+const badge = isLink ? 'link ↗' : (item.interactive ? 'interactive' : type);
+const tags = (item.categories || []).map((t) => '#' + t).join(' ');
+%>
+<a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener"<% } %> <%= metadataAttrs(item) %>>
+<span class="nb"><%= item.nb || '' %></span>
+<span>
+<span class="title"><%= item.title %></span>
+<% if (item.description) { %><span class="desc"><%= item.description %></span><% } %>
+<span class="meta"><%= item.date %> · <%= type %><%= item.where ? ' · ' + item.where : '' %><%= tags ? ' · ' + tags : '' %></span>
+</span>
+<span class="badge-type<%= badge === 'interactive' ? ' is-interactive' : '' %>"><%= badge %></span>
+</a>
+<% } %>
+</div>
+```

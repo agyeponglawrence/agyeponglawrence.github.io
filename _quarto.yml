@@ -1,0 +1,52 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "shelf/**/*.xlsx"
+    - "shelf/**/*.csv"
+    - "shelf/**/*.ipynb"
+
+website:
+  title: "Lawrence Agyepong"
+  description: "Interactive notebooks from an economist who likes to show the working. Every chart comes with the Python and an Excel version."
+  site-url: https://agyeponglawrence.com
+  favicon: images/favicon.png
+  open-graph: true
+  navbar:
+    left:
+      - href: index.qmd#shelf
+        text: Shelf
+      - href: index.qmd#tools
+        text: Tools
+      - href: about.qmd
+        text: About
+    right:
+      - text: Subscribe
+        href: https://ajaypong.substack.com
+      - icon: linkedin
+        href: https://www.linkedin.com/in/agyeponglawrence
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/agyeponglawrence
+        aria-label: GitHub
+  page-footer:
+    left: "© 2026 Lawrence Agyepong. Views are my own, not my employer's."
+    right: "[RSS](index.xml) · Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+      dark: [cosmo, styles.scss, styles-dark.scss]
+    respect-user-color-scheme: true
+    toc: false
+    code-fold: true
+    code-summary: "Show code"
+    code-tools: false
+    highlight-style: github
+    include-after-body:
+      - analytics.html
+      - _includes/site.html
+
+execute:
+  freeze: auto

@@ -1,0 +1,5 @@
+# Things I've built. One block per tool.
+- title: "Export Concentration Intelligence Tool"
+  description: "How concentrated a country's exports are, by market, product and province, with trade events marked on the history."
+  path: https://tleconomicintel.com/hhi/
+  where: dashboard · with TL Economic Intelligence

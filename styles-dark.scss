@@ -1,0 +1,25 @@
+/*-- scss:defaults --*/
+// Dark-mode palette. Overrides the light values in styles.scss.
+$la-paper: #121418;
+$la-ink: #ECEAE4;
+$la-ink2: #A9ADB6;
+$la-line: #2C3038;
+$la-card: #1A1D23;
+$la-gold: #F0B43C;
+$la-gold-text: #F0B43C;
+$la-gold-soft: #3A2F17;
+$la-slate: #8FAAD6;
+$la-grey: #7C828D;
+$la-code: #0E1013;
+
+$body-bg: $la-paper;
+$body-color: $la-ink;
+$primary: $la-gold-text;
+$link-color: $la-gold-text;
+$navbar-bg: $la-paper;
+$navbar-fg: $la-ink;
+$navbar-hl: $la-gold-text;
+$footer-bg: $la-paper;
+$footer-fg: $la-ink2;
+$border-color: $la-line;
+$code-block-bg: $la-code;

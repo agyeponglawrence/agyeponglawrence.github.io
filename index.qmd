@@ -1,0 +1,71 @@
+---
+pagetitle: "Lawrence Agyepong | An economist's playground"
+description: "Interactive notebooks from an economist who likes to show the working. Every chart comes with the Python and an Excel version."
+page-layout: full
+listing:
+  - id: featured
+    contents:
+      - "shelf/*/index.ipynb"
+      - "shelf/*/index.qmd"
+    include:
+      featured: true
+    sort: "date desc"
+    max-items: 1
+    template: _listings/hero.ejs
+    date-format: "D MMM YYYY"
+  - id: shelf
+    contents:
+      - "shelf/*/index.ipynb"
+      - "shelf/*/index.qmd"
+      - "shelf/links.yml"
+    sort: "date desc"
+    template: _listings/shelf.ejs
+    date-format: "D MMM YYYY"
+    feed: true
+  - id: tools
+    contents: tools.yml
+    template: _listings/tools.ejs
+---
+
+::: {#featured}
+:::
+
+::: {.la-section-head}
+## The shelf {#shelf-title}
+
+[Notebooks, notes, tutorials and links. Click a tag to filter.]{.mono style="font-size:13px;color:var(--la-ink2)"}
+:::
+
+::: {#shelf}
+:::
+
+::: {.la-section-head style="margin-top:56px"}
+## Things I've built {#tools-title}
+:::
+
+::: {#tools}
+:::
+
+::: {.la-about}
+::: {}
+## Hi, I'm Lawrence
+
+I'm an economist. By day I build economic models and monitoring tools; the rest of the time I play with data here. Every chart comes with the Python and an Excel version, so you can check my work or reuse the method.
+
+[More about me, my papers and CV →](about.qmd){.mono}
+:::
+
+::: {.la-subscribe}
+### Get the next notebook by email
+
+The finding, the chart, and the files to rebuild it. Free, on Substack.
+
+```{=html}
+<form action="https://ajaypong.substack.com/subscribe" method="get" target="_blank">
+  <label for="subscribe-email" class="visually-hidden-label">Email address</label>
+  <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" required>
+  <button type="submit" class="la-btn">Subscribe</button>
+</form>
+```
+:::
+:::

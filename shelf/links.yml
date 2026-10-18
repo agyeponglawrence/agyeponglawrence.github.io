@@ -1,0 +1,41 @@
+# Link cards: pieces that live somewhere else (Substack, LinkedIn, TL Economic Intelligence).
+# Add a new one by copying a block. Newest first is tidy but not required; the shelf sorts by date.
+# `categories` are your tags: invent new ones freely and they appear in the filter bar.
+
+- title: "Remove UK-bound metals and the record low in export concentration disappears"
+  description: "A stress test of our own headline: one trade flow carries most of the growth in non-US exports."
+  date: 2026-10-08
+  path: https://tleconomicintel.substack.com/p/remove-uk-bound-metals-and-canadas
+  where: TL Economic Intelligence
+  nb: NB-005
+  categories: [trade, indexes]
+
+- title: "Export concentration hits a record low, and one market carries the gains"
+  date: 2026-10-02
+  path: https://tleconomicintel.substack.com/p/canadas-export-concentration-hits
+  where: TL Economic Intelligence
+  nb: NB-004
+  categories: [trade, indexes]
+
+- title: "The most optimistic households are also the most financially strained"
+  description: "Newcomers expect to miss debt payments at ten times the rate of everyone else, and still expect things to improve."
+  date: 2026-07-23
+  path: https://www.linkedin.com/pulse/canadas-most-optimistic-households-also-its-strained-agyepong-jnesc/
+  where: LinkedIn
+  nb: NB-003
+  categories: [household-finances, surveys]
+
+- title: "Same shock, different pain"
+  description: "Why one gasoline price shock pushed inflation up far more in some provinces than others."
+  date: 2026-07-14
+  path: https://ajaypong.substack.com/p/same-shock-different-pain
+  where: Substack
+  nb: NB-002
+  categories: [inflation, regional]
+
+- title: "Tracking export diversification"
+  date: 2026-05-27
+  path: https://tleconomicintel.substack.com/p/tracking-canadas-export-diversification
+  where: TL Economic Intelligence
+  nb: NB-001
+  categories: [trade, dashboards]
