@@ -108,6 +108,8 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 // Shelf
 .la-section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; margin: 8px 0 14px; }
 .la-section-head h2 { margin: 0; font-size: 2rem; border-bottom: 0; padding-bottom: 0; }
+.la-section-head p { margin: 0; }
+.la-section-link { font-family: $font-family-monospace; font-size: 14px; color: var(--la-gold-text); text-decoration: none; &:hover { text-decoration: underline; } }
 .la-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .la-tags button {
   padding: 6px 13px; border-radius: 999px; border: 1px solid var(--la-line); background: var(--la-card);
