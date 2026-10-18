@@ -9,8 +9,11 @@ Every piece on the shelf is one folder in `shelf/`. Tags are free: whatever you 
 ### 1. A notebook, note or tutorial
 
 1. Copy `shelf/_template/` to `shelf/<yyyy-mm-short-name>/` (folders starting with `_` are never published).
-2. Edit the first cell of `index.ipynb`: `title`, `description` (one line), `date`, `type` (notebook, note, tutorial or tool), `nb` (next number), `categories` (your tags), and optionally `note` (one short line under the title). These fill the page header automatically.
-3. Follow the template's shape: under each heading, 2–3 key-point bullets, then one short paragraph, then the chart. Put *What this doesn't tell us* and *Questions I still have* before *Rebuild it in Excel*.
+2. Edit the first cell of `index.ipynb`. These fields build the page for you:
+   - `title`, `subtitle`, `description` (one line for the home page shelf), `date`, `type` (analysis, note, tutorial or tool), `nb` (next number), `categories` (your tags), optional `note` (one short line under the title).
+   - `key-points`: 2–3 bullets shown in a box under the subtitle ("What you'll learn" for tutorials).
+   - `notebook`, `excel`, `sources`: build the **Replicate this** section at the end automatically.
+3. Write it like a Substack post: short sections, each with its own `##` subheading and one chart, then a final `## What this doesn't answer` (limits and open questions). Share buttons appear on the page and under every chart automatically.
 4. Write and **run** the notebook so its charts are saved in the file. The site shows the saved outputs; it never re-runs your code.
 5. Put `replication.xlsx` and any data files in the same folder.
 6. Push:

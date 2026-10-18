@@ -108,3 +108,74 @@
   });
 })();
 </script>
+<script>
+// Sharing: the share bar under a piece's title, and a share row on every chart.
+(function () {
+  const pageUrl = () => location.href.split('#')[0];
+  const pageTitle = () => (document.querySelector('.la-piece-head h1') || {}).textContent || document.title;
+  const enc = encodeURIComponent;
+  const targets = {
+    linkedin: (url) => `https://www.linkedin.com/sharing/share-offsite/?url=${enc(url)}`,
+    x: (url, text) => `https://twitter.com/intent/tweet?text=${enc(text)}&url=${enc(url)}`,
+    bluesky: (url, text) => `https://bsky.app/intent/compose?text=${enc(text + ' ' + url)}`,
+  };
+
+  function copy(btn, text) {
+    const done = () => { const old = btn.textContent; btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = old; }, 1500); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, () => window.prompt('Copy this link:', text));
+    else window.prompt('Copy this link:', text);
+  }
+
+  function wire(group, url, text) {
+    group.querySelectorAll('[data-share]').forEach((el) => {
+      const kind = el.dataset.share;
+      if (targets[kind]) el.href = targets[kind](url, text);
+      if (kind === 'copy') el.addEventListener('click', () => copy(el, url));
+    });
+  }
+
+  function chartRow(fig, n) {
+    const id = 'chart-' + n;
+    fig.id = fig.id || id;
+    const url = pageUrl() + '#' + fig.id;
+    const row = document.createElement('div');
+    row.className = 'la-chart-share';
+    row.setAttribute('role', 'group');
+    row.setAttribute('aria-label', 'Share this chart');
+    row.innerHTML = '<button type="button" data-act="png">Download PNG</button>' +
+      '<button type="button" data-share="copy">Copy link</button>' +
+      '<a data-share="linkedin" target="_blank" rel="noopener">LinkedIn</a>' +
+      '<a data-share="x" target="_blank" rel="noopener">X</a>' +
+      '<a data-share="bluesky" target="_blank" rel="noopener">Bluesky</a>';
+    wire(row, url, pageTitle() + ' (chart ' + n + ')');
+    const png = row.querySelector('[data-act="png"]');
+    const plot = fig.querySelector('.js-plotly-plot');
+    const img = fig.querySelector('img');
+    const name = (location.pathname.split('/').filter(Boolean).slice(-2, -1)[0] || 'chart') + '-chart-' + n;
+    if (plot) {
+      png.addEventListener('click', () => {
+        if (window.Plotly && window.Plotly.downloadImage) window.Plotly.downloadImage(plot, { format: 'png', width: 1200, height: 700, filename: name });
+      });
+    } else if (img) {
+      png.addEventListener('click', () => { const a = document.createElement('a'); a.href = img.src; a.download = name + '.png'; a.click(); });
+    } else {
+      png.remove();
+    }
+    fig.appendChild(row);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const bar = document.querySelector('.la-piece-head .la-share');
+    if (!bar) return;
+    wire(bar, pageUrl(), pageTitle());
+    let n = 0;
+    document.querySelectorAll('#quarto-document-content .cell-output-display').forEach((fig) => {
+      if (fig.querySelector('.js-plotly-plot, .plotly-graph-div, img')) chartRow(fig, ++n);
+    });
+    if (location.hash) {
+      const target = document.getElementById(location.hash.slice(1));
+      if (target) setTimeout(() => target.scrollIntoView({ block: 'start' }), 300);
+    }
+  });
+})();
+</script>
