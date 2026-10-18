@@ -14,9 +14,9 @@ website:
   open-graph: true
   navbar:
     left:
-      - href: index.qmd#shelf
+      - href: index.qmd#shelf-title
         text: On the table
-      - href: index.qmd#tools
+      - href: tools/index.qmd
         text: Tools
       - href: about.qmd
         text: About
