@@ -30,8 +30,20 @@ website:
         href: https://github.com/agyeponglawrence
         aria-label: GitHub
   page-footer:
-    left: "© 2026 Lawrence Agyepong. Views are my own, not my employer's."
-    right: "[RSS](index.xml) · Built with [Quarto](https://quarto.org)"
+    left: "© 2026 Lawrence Agyepong · Views are my own, not my employer's · Built with [Quarto](https://quarto.org)"
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/agyeponglawrence
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:agyeponglawrence101@gmail.com
+        aria-label: Email
+      - icon: github
+        href: https://github.com/agyeponglawrence
+        aria-label: GitHub
+      - icon: rss
+        href: index.xml
+        aria-label: RSS feed
 
 format:
   html:
