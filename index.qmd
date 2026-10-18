@@ -1,68 +1,71 @@
 ---
-pagetitle: "Lawrence Agyepong | Open notebooks on the Canadian economy"
+pagetitle: "Lawrence Agyepong | An economist's playground"
+description: "Interactive notebooks from an economist who likes to show the working. Every chart comes with the Python and an Excel version."
 page-layout: full
 listing:
-  id: latest-notebooks
-  contents:
-    - "notebooks/*/index.qmd"
-    - "notebooks/*/index.ipynb"
-  sort: "date desc"
-  type: grid
-  max-items: 3
-  fields: [title, date, description]
-  feed: true
+  - id: featured
+    contents:
+      - "shelf/*/index.ipynb"
+      - "shelf/*/index.qmd"
+    include:
+      featured: true
+    sort: "date desc"
+    max-items: 1
+    template: _listings/hero.ejs
+    date-format: "D MMM YYYY"
+  - id: shelf
+    contents:
+      - "shelf/*/index.ipynb"
+      - "shelf/*/index.qmd"
+      - "shelf/links.yml"
+    sort: "date desc"
+    template: _listings/shelf.ejs
+    date-format: "D MMM YYYY"
+    feed: true
+  - id: tools
+    contents: tools.yml
+    template: _listings/tools.ejs
 ---
 
-::: {.hero}
-# Open notebooks on the Canadian economy
-
-::: {.lead}
-I'm an economist in Saskatchewan. I write about Canada's labour market, household finances and living standards, trade and public finances, and I publish the data and the method with every piece. Each notebook comes with the Python code and an Excel workbook, so you can check my work, rebuild the charts, or reuse the method for your own question.
+::: {#featured}
 :::
 
-::: {.hero-actions}
-[Subscribe on Substack](https://ajaypong.substack.com){.btn .btn-primary}
-[Browse the notebooks](notebooks/index.qmd){.btn .btn-outline-primary}
-:::
-:::
+::: {.la-section-head}
+## The shelf {#shelf-title}
 
-## What you get with every notebook
-
-::: {.pillars}
-::: {.pillar}
-### The question and the answer
-A short write-up that leads with the finding, then walks through how I got there.
+[Notebooks, notes, tutorials and links. Click a tag to filter.]{.mono style="font-size:13px;color:var(--la-ink2)"}
 :::
 
-::: {.pillar}
-### The Python notebook
-The full code, from pulling the Statistics Canada table to the final chart. Run it top to bottom and you should get my numbers.
+::: {#shelf}
 :::
 
-::: {.pillar}
-### The Excel workbook
-The same analysis built with formulas, for readers who don't code. Click any cell and you can see where it came from.
+::: {.la-section-head style="margin-top:56px"}
+## Things I've built {#tools-title}
 :::
 
-::: {.pillar}
-### The sources
-Every table number, release date and assumption, listed so you can trace each figure back to the data.
-:::
+::: {#tools}
 :::
 
-## Latest notebooks
+::: {.la-about}
+::: {}
+## Hi, I'm Lawrence
 
-The first notebook, on Canada's Beveridge curve (job vacancies against unemployment), goes up in mid-November.
+I'm an economist. By day I build economic models and monitoring tools; the rest of the time I play with data here. Every chart comes with the Python and an Excel version, so you can check my work or reuse the method.
 
-::: {#latest-notebooks}
+[More about me, my papers and CV →](about.qmd){.mono}
 :::
 
-## What I'm working on
+::: {.la-subscribe}
+### Get the next notebook by email
 
-I'm focused on three areas for now:
+The finding, the chart, and the files to rebuild it. Free, on Substack.
 
-- **Labour market.** The monthly Labour Force Survey, job vacancies, wages, and how population growth changes what the headline numbers mean.
-- **Household finances and living standards.** Household income and consumption, poverty, and the gaps between income groups, regions and newcomers.
-- **Trade, fiscal and tax policy.** Where Canada's exports go, how concentrated they are, and how to read federal budget tables yourself.
-
-Earlier work on provincial inflation, household debt and export concentration is on the [Writing](writing.qmd) page.
+```{=html}
+<form action="https://ajaypong.substack.com/subscribe" method="get" target="_blank">
+  <label for="subscribe-email" class="visually-hidden-label">Email address</label>
+  <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" required>
+  <button type="submit" class="la-btn">Subscribe</button>
+</form>
+```
+:::
+:::

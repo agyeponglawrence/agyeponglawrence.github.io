@@ -1,19 +1,23 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - "shelf/**/*.xlsx"
+    - "shelf/**/*.csv"
+    - "shelf/**/*.ipynb"
 
 website:
   title: "Lawrence Agyepong"
-  description: "Open research notebooks on the Canadian economy. Every chart comes with the Python notebook and an Excel workbook so you can rebuild it."
+  description: "Interactive notebooks from an economist who likes to show the working. Every chart comes with the Python and an Excel version."
   site-url: https://agyeponglawrence.com
   favicon: images/favicon.png
   open-graph: true
   navbar:
     left:
-      - href: notebooks/index.qmd
-        text: Notebooks
-      - href: writing.qmd
-        text: Writing
+      - href: index.qmd#shelf
+        text: Shelf
+      - href: index.qmd#tools
+        text: Tools
       - href: about.qmd
         text: About
     right:
@@ -26,12 +30,23 @@ website:
         href: https://github.com/agyeponglawrence
         aria-label: GitHub
   page-footer:
-    left: "© 2026 Lawrence Agyepong. Views are my own."
-    right: "Built with [Quarto](https://quarto.org)."
+    left: "© 2026 Lawrence Agyepong. Views are my own, not my employer's."
+    right: "[RSS](index.xml) · Built with [Quarto](https://quarto.org)"
 
 format:
   html:
     theme:
       light: [cosmo, styles.scss]
+      dark: [cosmo, styles.scss, styles-dark.scss]
+    respect-user-color-scheme: true
     toc: false
-    include-after-body: analytics.html
+    code-fold: true
+    code-summary: "Show code"
+    code-tools: false
+    highlight-style: github
+    include-after-body:
+      - analytics.html
+      - _includes/site.html
+
+execute:
+  freeze: auto
