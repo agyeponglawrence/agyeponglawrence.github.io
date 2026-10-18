@@ -162,3 +162,18 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 .la-callout { border: 1px dashed var(--la-gold); border-radius: 10px; padding: 10px 14px; font-family: $font-family-monospace; font-size: 13px; color: var(--la-gold-text); }
 
 .visually-hidden-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+// Welcome line and the short "Say hi" section
+.la-welcome {
+  font-family: $headings-font-family; font-weight: 500; font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+  line-height: 1.35; padding: 36px 0 4px; max-width: 36em; text-wrap: balance;
+  .soft { color: var(--la-ink2); }
+}
+.la-welcome + #featured .la-hero { padding-top: 20px; }
+.la-hi { display: flex; flex-direction: column; gap: 14px; padding-bottom: 40px; font-size: 1.05rem; }
+.la-hi p { margin: 0; }
+.la-hi-form {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  label { flex: 1 0 100%; color: var(--la-ink2); }
+  input { flex: 0 1 280px; min-width: 0; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--la-line); background: var(--la-card); color: var(--la-ink); }
+}
