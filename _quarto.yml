@@ -15,7 +15,7 @@ website:
   navbar:
     left:
       - href: index.qmd#shelf-title
-        text: On the table
+        text: Notebooks
       - href: tools/index.qmd
         text: Tools
       - href: about.qmd

@@ -179,3 +179,14 @@
   });
 })();
 </script>
+<script>
+// Gold underline on the navbar link for the section you're in (notebook pages and tool pages included).
+(() => {
+  const path = location.pathname;
+  const pick = /\/shelf\//.test(path) ? 'shelf-title' : /\/tools\//.test(path) ? 'tools/index' : /\/about/.test(path) ? 'about' : null;
+  if (!pick) return;
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(a => {
+    if ((a.getAttribute('href') || '').includes(pick)) { a.classList.add('la-current'); a.setAttribute('aria-current', 'page'); }
+  });
+})();
+</script>
