@@ -30,6 +30,8 @@ Rebuilt one of my notebooks, or got a different number? I'd love to hear from yo
 ::: {.la-papers}
 - [Consumption gaps across poverty groups in Ghana](https://doi.org/10.1080/10875549.2024.2338164 "Household consumption expenditure determinants across poverty subgroups in Sub-Saharan Africa: Evidence from the Ghanaian Living Standard Survey. Journal of Poverty 30(1), 26–51.") [Journal of Poverty, 2024]{.mono}
 - [Health shocks and farmers' access to credit](https://doaj.org/article/baa1740e940d4c6e9e1e3f160d71f1be "Health shocks and rural farmers credit access shifts in Sub-Saharan Africa: Evidence from the Kwahu Afram Plains South District, Ghana. Environmental Challenges 15, 100924.") [Environmental Challenges, 2024]{.mono}
-- [What drives poverty in Ghana's farming households](https://fis.tu-dresden.de/portal/en/publications/determinants-of-poverty-status-depth-and-severity-among-agricultural-households-in-ghana(30df8388-1464-4b50-a32a-e709d956d335).html "Determinants of poverty status, depth, and severity among agricultural households in Ghana. Scientific African, e03017.") [Scientific African]{.mono}
+- [What drives poverty in Ghana's farming households](https://www.sciencedirect.com/science/article/pii/S2468227625004831 "Determinants of poverty status, depth, and severity among agricultural households in Ghana. Scientific African 30, e03017.") [Scientific African, 2025]{.mono}
 :::
+
+[All my papers on Google Scholar →](https://scholar.google.ca/citations?user=6BoGslAAAAAJ&hl=en)
 
