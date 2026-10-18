@@ -38,7 +38,7 @@ Hi, welcome to my playground. I'm Lawrence.<br>
 :::
 
 ::: {.la-section-head}
-## On the table {#shelf-title}
+## Notebooks {#shelf-title}
 :::
 
 ::: {#shelf}
