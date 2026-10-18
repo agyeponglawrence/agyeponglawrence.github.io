@@ -46,12 +46,12 @@ Hi, welcome to my playground. I'm Lawrence.<br>
 
 ::: {.la-section-head style="margin-top:56px"}
 ## Things I've built {#tools-title}
+
+[All tools →](tools/index.qmd){.la-section-link}
 :::
 
 ::: {#tools}
 :::
-
-[All tools →](tools/index.qmd){.mono}
 
 ::: {.la-section-head style="margin-top:56px"}
 ## Say hi {#hi-title}
