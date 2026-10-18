@@ -1,5 +1,7 @@
 # Applies to every piece on the shelf.
 date-format: "D MMM YYYY"
+filters:
+  - ../_filters/piece.lua
 format:
   html:
     template-partials:

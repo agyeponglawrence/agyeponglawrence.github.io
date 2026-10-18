@@ -192,3 +192,35 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 .la-piece-meta .la-tag { text-decoration: none; }
 .la-piece-meta .la-tag:hover { border-color: var(--la-gold); color: var(--la-ink); }
 .la-piece-meta .la-chip { padding: 4px 12px; font-size: 12px; }
+
+// Key points, sharing and Replicate (shelf pieces)
+.la-keypoints {
+  margin: 0 0 32px; padding: 18px 22px; border-radius: 14px;
+  background: var(--la-card); border: 1px solid var(--la-line); border-left-width: 1px;
+  .la-kp-title { margin: 0 0 8px; font-size: 1rem; font-family: $font-family-monospace; font-weight: 500; color: var(--la-gold-text); border: 0; padding: 0; text-transform: none; letter-spacing: 0; }
+  ul { margin: 0; padding-left: 1.2rem; }
+  li { margin: 4px 0; }
+}
+.la-share, .la-chart-share {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+  font-family: $font-family-monospace; font-size: 12px;
+  a, button {
+    padding: 4px 11px; border-radius: 999px; border: 1px solid var(--la-line); background: var(--la-card);
+    color: var(--la-ink2) !important; text-decoration: none; cursor: pointer; font: inherit;
+    &:hover { border-color: var(--la-gold); color: var(--la-ink) !important; }
+  }
+}
+.la-share { padding-bottom: 18px; }
+.la-share-label { color: var(--la-ink2); margin-right: 4px; }
+.la-chart-share { margin: 8px 0 4px; justify-content: flex-end; opacity: .8; }
+.la-chart-share:hover, .la-chart-share:focus-within { opacity: 1; }
+.la-replicate { margin-top: 48px; padding-top: 8px; border-top: 1px dashed var(--la-line); }
+.la-files-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px; margin: 14px 0 8px; }
+.la-file {
+  display: flex; flex-direction: column; gap: 4px; padding: 16px 18px; border-radius: 14px;
+  background: var(--la-card); border: 1px solid var(--la-line); color: var(--la-ink) !important; text-decoration: none;
+  &:hover { border-color: var(--la-gold); }
+  .kind { font-family: $font-family-monospace; font-size: 12px; color: var(--la-gold-text); }
+  .name { font-weight: 600; }
+  .what { font-size: 0.9rem; color: var(--la-ink2); }
+}
