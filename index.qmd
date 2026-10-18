@@ -17,7 +17,7 @@ listing:
 # Open notebooks on the Canadian economy
 
 ::: {.lead}
-I'm an economist in Saskatchewan. I write about Canada's labour market, trade and public finances, and I publish the data and the method with every piece. Each notebook comes with the Python code and an Excel workbook, so you can check my work, rebuild the charts, or reuse the method for your own question.
+I'm an economist in Saskatchewan. I write about Canada's labour market, household finances and living standards, trade and public finances, and I publish the data and the method with every piece. Each notebook comes with the Python code and an Excel workbook, so you can check my work, rebuild the charts, or reuse the method for your own question.
 :::
 
 ::: {.hero-actions}
@@ -59,9 +59,10 @@ The first notebook, on Canada's Beveridge curve (job vacancies against unemploym
 
 ## What I'm working on
 
-I'm focused on two areas for now:
+I'm focused on three areas for now:
 
 - **Labour market.** The monthly Labour Force Survey, job vacancies, wages, and how population growth changes what the headline numbers mean.
+- **Household finances and living standards.** Household income and consumption, poverty, and the gaps between income groups, regions and newcomers.
 - **Trade, fiscal and tax policy.** Where Canada's exports go, how concentrated they are, and how to read federal budget tables yourself.
 
-Earlier work on provincial inflation, household finances and export concentration is on the [Writing](writing.qmd) page.
+Earlier work on provincial inflation, household debt and export concentration is on the [Writing](writing.qmd) page.
