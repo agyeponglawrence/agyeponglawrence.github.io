@@ -1,0 +1,37 @@
+/*-- scss:defaults --*/
+$primary: #1f3864;
+$link-color: #1f5fa8;
+$font-family-sans-serif: "Source Sans 3", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$navbar-bg: #ffffff;
+$navbar-fg: #1f3864;
+$footer-bg: #ffffff;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+
+.hero {
+  padding: 2.5rem 0 1.5rem;
+  h1 { font-weight: 700; font-size: 2.4rem; margin-bottom: .5rem; }
+  .lead { font-size: 1.25rem; color: #444; max-width: 40rem; }
+}
+
+.hero-actions a { margin: .25rem .5rem .25rem 0; }
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  .pillar {
+    border: 1px solid #dfe3ea;
+    border-radius: .5rem;
+    padding: 1rem 1.1rem;
+    h3 { font-size: 1.05rem; margin-top: 0; font-weight: 600; }
+    p { margin-bottom: 0; color: #555; }
+  }
+}
+
+.writing-list {
+  li { margin-bottom: .6rem; }
+  .meta { color: #666; font-size: .9rem; }
+}

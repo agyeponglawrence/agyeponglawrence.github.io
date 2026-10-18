@@ -1,0 +1,67 @@
+---
+pagetitle: "Lawrence Agyepong | Open notebooks on the Canadian economy"
+page-layout: full
+listing:
+  id: latest-notebooks
+  contents:
+    - "notebooks/*/index.qmd"
+    - "notebooks/*/index.ipynb"
+  sort: "date desc"
+  type: grid
+  max-items: 3
+  fields: [title, date, description]
+  feed: true
+---
+
+::: {.hero}
+# Open notebooks on the Canadian economy
+
+::: {.lead}
+I'm an economist in Saskatchewan. I write about Canada's labour market, trade and public finances, and I publish the data and the method with every piece. Each notebook comes with the Python code and an Excel workbook, so you can check my work, rebuild the charts, or reuse the method for your own question.
+:::
+
+::: {.hero-actions}
+[Subscribe on Substack](https://ajaypong.substack.com){.btn .btn-primary}
+[Browse the notebooks](notebooks/index.qmd){.btn .btn-outline-primary}
+:::
+:::
+
+## What you get with every notebook
+
+::: {.pillars}
+::: {.pillar}
+### The question and the answer
+A short write-up that leads with the finding, then walks through how I got there.
+:::
+
+::: {.pillar}
+### The Python notebook
+The full code, from pulling the Statistics Canada table to the final chart. Run it top to bottom and you should get my numbers.
+:::
+
+::: {.pillar}
+### The Excel workbook
+The same analysis built with formulas, for readers who don't code. Click any cell and you can see where it came from.
+:::
+
+::: {.pillar}
+### The sources
+Every table number, release date and assumption, listed so you can trace each figure back to the data.
+:::
+:::
+
+## Latest notebooks
+
+The first notebook, on Canada's Beveridge curve (job vacancies against unemployment), goes up in mid-November.
+
+::: {#latest-notebooks}
+:::
+
+## What I'm working on
+
+I'm focused on two areas for now:
+
+- **Labour market.** The monthly Labour Force Survey, job vacancies, wages, and how population growth changes what the headline numbers mean.
+- **Trade, fiscal and tax policy.** Where Canada's exports go, how concentrated they are, and how to read federal budget tables yourself.
+
+Earlier work on provincial inflation, household finances and export concentration is on the [Writing](writing.qmd) page.

@@ -1,0 +1,28 @@
+---
+title: "About"
+image: images/lawrence.jpg
+about:
+  template: trestles
+  image-shape: round
+  image-width: 14em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/agyeponglawrence
+    - icon: envelope
+      text: Email
+      href: mailto:agyeponglawrence101@gmail.com
+    - icon: journal-text
+      text: Substack
+      href: https://ajaypong.substack.com
+---
+
+I'm an economist with the Government of Saskatchewan's Ministry of Finance. At work I build the tools that show how the provincial economy is doing and what a shock to it would cost: impact models for things like US tariffs, and the data products behind our monthly monitoring.
+
+Outside work, I write about the Canadian economy and publish the data and methods with each piece. This site is where those notebooks live. The idea is simple: if I show you a chart, you should be able to rebuild it, either in Python or in Excel.
+
+I grew up in Ghana. I hold an MA in Economics from the University of Saskatchewan and a BA in Economics and Mathematics from the University of Ghana.
+
+If you work on economic measurement, or you've rebuilt one of my notebooks and want to compare methods, I'd like to hear from you.
+
+*Everything on this site is my own work and my own views. It doesn't represent the Government of Saskatchewan.*

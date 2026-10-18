@@ -1,0 +1,17 @@
+---
+title: "Notebooks"
+description: "Each notebook answers one question about the Canadian economy and ships with the Python code, an Excel workbook and the sources."
+listing:
+  contents:
+    - "*/index.qmd"
+    - "*/index.ipynb"
+  sort: "date desc"
+  type: table
+  fields: [date, title, categories, description]
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  date-format: "D MMM YYYY"
+---
+
+Each notebook answers one question and ships with three things: the Python notebook, an Excel replication workbook and a list of sources. If you rebuild one and get a different number, I'd like to hear about it.

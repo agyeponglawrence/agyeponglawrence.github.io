@@ -1,0 +1,32 @@
+---
+title: "Writing"
+description: "Analysis of the Canadian economy, published on LinkedIn, Substack and with TL Economic Intelligence."
+---
+
+## TL Economic Intelligence
+
+I co-run [TL Economic Intelligence](https://tleconomicintel.substack.com) with Titus Ojo. We build open economic data tools and write about what they show.
+
+::: {.writing-list}
+- [Remove UK-bound metals and Canada's record low export concentration disappears](https://tleconomicintel.substack.com/p/remove-uk-bound-metals-and-canadas) [8 Oct 2026]{.meta}
+- [Canada's export concentration holds at a record low as August's monthly reading rebounds](https://tleconomicintel.substack.com/p/canadas-export-concentration-holds) [6 Oct 2026]{.meta}
+- [Canada's export concentration hits a record low, and one market carries the gains](https://tleconomicintel.substack.com/p/canadas-export-concentration-hits) [2 Oct 2026]{.meta}
+- [Tracking Canada's export diversification](https://tleconomicintel.substack.com/p/tracking-canadas-export-diversification) [27 May 2026]{.meta}
+:::
+
+**Tool:** the [Canadian Export Concentration Intelligence Tool](https://tleconomicintel.com/hhi/) tracks how concentrated Canada's exports are by market, product and province.
+
+## Essays
+
+::: {.writing-list}
+- [Canada's most optimistic households are also its most financially strained](https://www.linkedin.com/pulse/canadas-most-optimistic-households-also-its-strained-agyepong-jnesc/) [Jul 2026, LinkedIn]{.meta}
+- [Same shock, different pain](https://ajaypong.substack.com/p/same-shock-different-pain): why gasoline inflation hit some provinces harder than others [Jul 2026, Substack]{.meta}
+:::
+
+## Peer-reviewed research
+
+::: {.writing-list}
+- Household consumption expenditure determinants across poverty subgroups in Sub-Saharan Africa: evidence from the Ghanaian Living Standard Survey. *Journal of Poverty* 30(1), 26–51 (2024).
+- Health shocks and rural farmers' credit access shifts in Sub-Saharan Africa: evidence from the Kwahu Afram Plains South District, Ghana. *Environmental Challenges* 15, 100924 (2024).
+- Determinants of poverty status, depth, and severity among agricultural households in Ghana. *Scientific African*, e03017.
+:::
