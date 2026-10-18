@@ -1,6 +1,6 @@
 # agyeponglawrence.com
 
-An economist's playground: interactive notebooks where every chart comes with the Python and an Excel version. Built with [Quarto](https://quarto.org) and published to GitHub Pages on every push to `main`.
+An economist's playground: interactive notebooks where every chart comes with the Python and an Excel version. Built with [Quarto](https://quarto.org) and hosted on [Vercel](https://vercel.com). Every push to `main` goes live; every pull request gets its own preview link.
 
 ## Add something new
 
@@ -20,7 +20,7 @@ Every piece on the shelf is one folder in `shelf/`. Tags are free: whatever you 
    git push
    ```
 
-The site rebuilds in about two minutes. If the build fails, the old site stays up.
+Vercel rebuilds the site in a couple of minutes. If the build fails, the old site stays up and Vercel shows the error log.
 
 **Charts:** use Plotly and keep `pio.renderers.default = "plotly_mimetype+notebook_connected"` from the template; charts stay interactive (hover, zoom, sliders). Code is folded behind "Show code" automatically. Hide a helper cell entirely with `#| include: false` as its first line.
 
@@ -59,7 +59,12 @@ Add a block to `tools.yml` (title, description, path, where).
 | `_listings/` | Templates for the hero, shelf and tools sections |
 | `_includes/site.html` | Hero chart animation and tag filter behaviour |
 | `styles.scss`, `styles-dark.scss` | Colours and fonts, light and dark |
-| `analytics.html` | Analytics snippet (GoatCounter) |
+| `analytics.html` | Analytics snippet (Vercel Web Analytics) |
+| `vercel.json`, `scripts/vercel-build.sh` | Vercel build: installs Quarto, renders to `_site/` |
+
+## Hosting on Vercel
+
+Vercel runs `scripts/vercel-build.sh`, which downloads Quarto (version pinned in the script) and runs `quarto render`. Notebooks are not re-executed, so no Python is needed on Vercel. To upgrade Quarto, change `QUARTO_VERSION` in the script.
 
 ## Preview locally
 
