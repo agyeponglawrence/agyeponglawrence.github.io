@@ -49,16 +49,27 @@ $font-size-root: 17px;
 h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .mono { font-family: $font-family-monospace; }
 
-// Navbar brand mark
-.navbar { border-bottom: 1px solid var(--la-line); }
-.navbar-brand .navbar-title::before {
-  content: "la";
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 32px; height: 32px; margin-right: 10px; border-radius: 8px;
-  background: var(--la-ink); color: var(--la-gold);
-  font-family: $font-family-monospace; font-size: 14px; vertical-align: middle;
+// Navbar: sticky with a soft blur, name only, gold underline on the current section
+#quarto-header.headroom--unpinned { transform: none !important; }
+#quarto-header .navbar {
+  border-bottom: 1px solid var(--la-line);
+  background-color: color-mix(in srgb, var(--la-paper) 90%, transparent) !important;
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
 }
 .navbar-title { font-family: $headings-font-family; font-weight: 700; }
+.navbar-nav .nav-link .menu-text { position: relative; }
+.navbar-nav .nav-link.active .menu-text::after, .navbar-nav .nav-link.la-current .menu-text::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px; background: var(--la-gold);
+}
+.navbar-nav .nav-link.la-current { color: var(--la-gold-text); }
+.navbar-nav .nav-link[href*="substack.com"] {
+  margin: 0 6px; padding: 6px 14px !important; border-radius: 999px;
+  background: var(--la-gold); color: #17181C !important; font-weight: 600;
+  &:hover { background: var(--la-ink); color: var(--la-paper) !important; }
+}
+@media (max-width: 991px) { .navbar-nav .nav-link[href*="substack.com"] { display: inline-block; margin: 6px 0; } }
+.navbar-toggler { border: 0; padding: 4px 6px; &:focus { box-shadow: none; } &:focus-visible { outline: 2px solid var(--la-gold); } }
+@media (max-width: 575px) { .navbar-title { font-size: 1.05rem; } .navbar-brand { margin-right: 0; padding-right: 12px; } }
 
 // Buttons and chips
 .la-btn {
