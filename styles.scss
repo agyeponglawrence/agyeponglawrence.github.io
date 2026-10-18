@@ -182,3 +182,13 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 .la-papers ul { list-style: none; padding-left: 0; margin: 0; }
 .la-papers li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--la-line); }
 .la-papers .mono { font-size: 12px; color: var(--la-ink2); }
+
+// Notebook page header (shelf pieces)
+.la-piece-head { padding: 28px 0 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--la-line); margin-bottom: 28px; }
+.la-piece-head h1.title { margin: 0; font-size: clamp(2rem, 4.2vw, 2.9rem); line-height: 1.08; }
+.la-piece-desc { margin: 0; font-size: 1.15rem; color: var(--la-ink2); }
+.la-piece-note { margin: 0; font-family: $font-family-monospace; font-size: 12px; color: var(--la-gold-text); }
+.la-piece-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 16px; }
+.la-piece-meta .la-tag { text-decoration: none; }
+.la-piece-meta .la-tag:hover { border-color: var(--la-gold); color: var(--la-ink); }
+.la-piece-meta .la-chip { padding: 4px 12px; font-size: 12px; }
