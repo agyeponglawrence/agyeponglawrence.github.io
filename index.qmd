@@ -23,7 +23,9 @@ listing:
     date-format: "D MMM YYYY"
     feed: true
   - id: tools
-    contents: tools.yml
+    contents: "tools/*/index.qmd"
+    sort: "added desc"
+    max-items: 1
     template: _listings/tools.ejs
 ---
 
@@ -48,6 +50,8 @@ Hi, welcome to my playground. I'm Lawrence.<br>
 
 ::: {#tools}
 :::
+
+[All tools →](tools/index.qmd){.mono}
 
 ::: {.la-section-head style="margin-top:56px"}
 ## Say hi {#hi-title}

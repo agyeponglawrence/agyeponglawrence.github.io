@@ -224,3 +224,12 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
   .name { font-weight: 600; }
   .what { font-size: 0.9rem; color: var(--la-ink2); }
 }
+
+// Tools
+.la-tool-soon { border-style: dashed; background: transparent; margin-top: 16px; max-width: 420px; }
+.la-tool-shot {
+  display: flex; align-items: center; justify-content: center; min-height: 260px; margin: 8px 0 20px;
+  border-radius: 16px; border: 1px dashed var(--la-line); background: var(--la-card); color: var(--la-ink2);
+  img { width: 100%; border-radius: 12px; }
+}
+.la-small { font-size: 0.85rem; color: var(--la-ink2); }

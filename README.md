@@ -49,7 +49,7 @@ Add a block to `shelf/links.yml`:
 
 ### 4. A tool
 
-Add a block to `tools.yml` (title, description, path, where).
+Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (see `tools/README.md`). Each tool gets its own page with a screenshot, what it answers, an "Open the tool" button and related notebooks; the newest one shows on the home page.
 
 ## How it's organised
 
@@ -58,7 +58,7 @@ Add a block to `tools.yml` (title, description, path, where).
 | `index.qmd` | Home page: featured piece, shelf, tools, about |
 | `shelf/` | One folder per piece, plus `links.yml` for link cards |
 | `shelf/_template/` | Starting point for a new piece |
-| `tools.yml` | Things I've built |
+| `tools/` | Tools page and one folder per tool |
 | `about.qmd` | About page, papers, CV |
 | `_listings/` | Templates for the hero, shelf and tools sections |
 | `_includes/site.html` | Hero chart animation and tag filter behaviour |

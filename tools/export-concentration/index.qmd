@@ -1,0 +1,40 @@
+---
+title: "Export Concentration Intelligence Tool"
+description: "How concentrated Canada's exports are, who carries the new trade, and what moved it."
+added: 2026-05-27   # newest tool shows on the home page
+where: "dashboard · with TL Economic Intelligence"
+tool-url: https://tleconomicintel.com/hhi/
+related-tags: [indexes, trade]
+listing:
+  id: related
+  contents:
+    - "../../shelf/*/index.ipynb"
+    - "../../shelf/*/index.qmd"
+    - "../../shelf/links.yml"
+  include:
+    categories: indexes
+  sort: "date desc"
+  template: ../../_listings/related.ejs
+  date-format: "D MMM YYYY"
+---
+
+::: {.la-tool-shot}
+<!-- Replace this block with: ![](screenshot.png){fig-alt="The export concentration dashboard"} -->
+[Screenshot coming soon]{.mono}
+:::
+
+[Open the tool ↗](https://tleconomicintel.com/hhi/){.la-btn target="_blank"}
+
+## What it answers
+
+- How concentrated are a country's exports, and is that rising or falling? The headline is the Herfindahl-Hirschman Index (HHI), from 0 (spread across many partners) to 1 (all to one partner).
+- How many equal-sized partners would give the same concentration? The "equivalent partners" number turns the HHI into something you can picture.
+- What happens without the US? Filter by province, product and trading partner, and see how far the new trade really reaches.
+- Which events moved it? The full history has market shocks, trade agreements and trade friction marked, and every chart downloads as a PNG.
+
+[Source: Statistics Canada, Table 12-10-0175-01; TL Economic Intelligence calculations.]{.la-small}
+
+## Notebooks that use it
+
+::: {#related}
+:::

@@ -1,0 +1,11 @@
+```{=html}
+<div class="la-shelf list">
+<% for (const item of items) { const isLink = /^https?:/.test(item.path || ''); %>
+<a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener"<% } %> <%= metadataAttrs(item) %>>
+<span class="nb"><%= item.nb || '' %></span>
+<span><span class="title"><%= item.title %></span><span class="meta"><%= item.date %></span></span>
+<span class="badge-type"><%= isLink ? 'link ↗' : (item.type || 'notebook') %></span>
+</a>
+<% } %>
+</div>
+```
