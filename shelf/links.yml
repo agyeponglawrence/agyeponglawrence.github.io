@@ -11,6 +11,7 @@
   categories: [trade, indexes]
 
 - title: "Export concentration hits a record low, and one market carries the gains"
+  description: "Canada's exports are the least concentrated on record, but outside the US most of the new trade goes to one market."
   date: 2026-10-02
   path: https://tleconomicintel.substack.com/p/canadas-export-concentration-hits
   where: TL Economic Intelligence
@@ -34,6 +35,7 @@
   categories: [inflation, regional]
 
 - title: "Tracking export diversification"
+  description: "A new way to measure how concentrated Canada's exports are, and a tracker to follow it month by month."
   date: 2026-05-27
   path: https://tleconomicintel.substack.com/p/tracking-canadas-export-diversification
   where: TL Economic Intelligence
