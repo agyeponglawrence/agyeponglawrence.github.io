@@ -190,3 +190,42 @@
   });
 })();
 </script>
+<script>
+// Put the skip link first in tab order (Quarto inserts it after the header).
+(() => { const a = document.querySelector('.la-skip'); if (a) document.body.prepend(a); })();
+// Make Plotly sliders usable from the keyboard: Tab to the slider, then arrow keys, Home and End.
+(() => {
+  const wire = (gd) => {
+    const sl = gd.layout && gd.layout.sliders && gd.layout.sliders[0];
+    const g = gd.querySelector('.slider-container');
+    if (!sl || !g || g.dataset.laKbd) return;
+    g.dataset.laKbd = '1';
+    const n = sl.steps.length;
+    const label = ((sl.currentvalue && sl.currentvalue.prefix) || 'Chart slider').replace(/[:\s]+$/, '');
+    g.setAttribute('tabindex', '0'); g.setAttribute('role', 'slider'); g.setAttribute('aria-label', label);
+    g.setAttribute('aria-valuemin', 0); g.setAttribute('aria-valuemax', n - 1);
+    const sync = () => {
+      const i = gd.layout.sliders[0].active || 0;
+      g.setAttribute('aria-valuenow', i); g.setAttribute('aria-valuetext', String(gd.layout.sliders[0].steps[i].label));
+    };
+    sync();
+    g.addEventListener('keydown', (e) => {
+      const keys = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 };
+      let i = gd.layout.sliders[0].active || 0;
+      if (e.key in keys) i += keys[e.key]; else if (e.key === 'Home') i = 0; else if (e.key === 'End') i = n - 1; else return;
+      e.preventDefault();
+      i = Math.max(0, Math.min(n - 1, i));
+      const step = gd.layout.sliders[0].steps[i];
+      const run = window.Plotly[step.method] ? window.Plotly[step.method](gd, ...(step.args || [])) : Promise.resolve();
+      Promise.resolve(run).then(() => window.Plotly.relayout(gd, { 'sliders[0].active': i })).then(sync);
+    });
+    gd.on && gd.on('plotly_sliderchange', () => setTimeout(sync, 0));
+  };
+  let tries = 0;
+  const scan = () => {
+    document.querySelectorAll('.js-plotly-plot').forEach(wire);
+    if (++tries < 40) setTimeout(scan, 500);
+  };
+  window.addEventListener('load', scan);
+})();
+</script>

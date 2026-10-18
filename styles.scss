@@ -181,6 +181,8 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
   font-family: $headings-font-family; font-weight: 500; font-size: clamp(1.35rem, 2.6vw, 1.75rem);
   line-height: 1.35; padding: 36px 0 4px; max-width: 36em; text-wrap: balance;
   .soft { color: var(--la-ink2); }
+  p { margin: 0; }
+  .la-welcome-what { display: block; margin-top: 14px; font-family: $font-family-sans-serif; font-weight: 400; font-size: 1.05rem; color: var(--la-ink2); }
 }
 .la-welcome + #featured .la-hero { padding-top: 20px; }
 .la-hi {
@@ -261,3 +263,16 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
   .footer-items .nav-link { padding: 4px 8px; font-size: 1.05rem; }
   @media (min-width: 768px) { .nav-footer-left { flex: 1 1 auto; } .nav-footer-center { flex: 0 0 0; } .nav-footer-right { flex: 0 0 auto; } }
 }
+
+// Accessibility: skip link, keyboard focus on chart sliders, no Plotly toolbar (each chart has its own Download / Share row)
+.la-skip {
+  position: absolute; left: 12px; top: -60px; z-index: 2000; padding: 10px 16px; border-radius: 10px;
+  background: var(--la-gold); color: #17181C !important; font-weight: 600; text-decoration: none;
+  &:focus { top: 12px; }
+}
+#quarto-document-content:focus { outline: none; }
+html { scroll-padding-top: 84px; }
+.js-plotly-plot .modebar-container { display: none !important; }
+.js-plotly-plot .slider-container { outline: none; }
+.js-plotly-plot .slider-container:focus-visible .slider-grip-rect { stroke: var(--la-gold) !important; stroke-width: 3px !important; }
+.js-plotly-plot .slider-container:focus-visible .slider-rail-rect { stroke: var(--la-gold) !important; }
