@@ -228,8 +228,8 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 // Tools
 .la-tool-soon { border-style: dashed; background: transparent; margin-top: 16px; max-width: 420px; }
 .la-tool-shot {
-  display: flex; align-items: center; justify-content: center; min-height: 260px; margin: 8px 0 20px;
-  border-radius: 16px; border: 1px dashed var(--la-line); background: var(--la-card); color: var(--la-ink2);
-  img { width: 100%; border-radius: 12px; }
+  display: grid; gap: 14px; margin: 8px 0 20px;
+  p { margin: 0; }
+  img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--la-line); }
 }
 .la-small { font-size: 0.85rem; color: var(--la-ink2); }

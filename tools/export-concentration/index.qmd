@@ -19,8 +19,9 @@ listing:
 ---
 
 ::: {.la-tool-shot}
-<!-- Replace this block with: ![](screenshot.png){fig-alt="The export concentration dashboard"} -->
-[Screenshot coming soon]{.mono}
+![](screenshot.webp){fig-alt="The dashboard's headline numbers: HHI of 0.48, about 2.1 equivalent partners, and 0.14 once the US is excluded"}
+
+![](screenshot-history.webp){fig-alt="Ten years of Canada's export concentration, with key trade events marked on the line"}
 :::
 
 [Open the tool ↗](https://tleconomicintel.com/hhi/){.la-btn target="_blank"}
