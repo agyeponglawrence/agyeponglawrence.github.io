@@ -1,5 +1,10 @@
 ---
-title: "About"
+title: "Lawrence Agyepong"
+pagetitle: "About"
+open-graph:
+  title: "About Lawrence Agyepong"
+twitter-card:
+  title: "About Lawrence Agyepong"
 image: images/lawrence.jpg
 image-alt: "Lawrence Agyepong smiling"
 about:
@@ -24,7 +29,7 @@ I grew up in Ghana and studied economics at the University of Ghana and the Univ
 
 Here I play with data that catches my eye, and share the notebooks so you can too.
 
-Rebuilt one of my notebooks, or got a different number? I'd love to hear from you: **agyeponglawrence101@gmail.com**
+Rebuilt one of my notebooks, or got a different number? I'd love to hear from you: **[agyeponglawrence101@gmail.com](mailto:agyeponglawrence101@gmail.com)**
 
 ## Papers {.la-papers-head}
 
