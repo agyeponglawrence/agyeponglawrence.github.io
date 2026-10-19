@@ -192,6 +192,17 @@
 })();
 </script>
 <script>
+// On small screens the navbar collapses; keep a Subscribe pill visible in the bar itself.
+(() => {
+  const src = document.querySelector('.navbar-nav .nav-link[href*="substack.com"]');
+  const bar = document.querySelector('.navbar-container');
+  if (!src || !bar) return;
+  const pill = document.createElement('a');
+  pill.className = 'la-sub-mobile';
+  pill.href = src.getAttribute('href');
+  pill.textContent = 'Subscribe';
+  bar.insertBefore(pill, bar.querySelector('#quarto-search, .navbar-toggler'));
+})();
 // Put the skip link first in tab order (Quarto inserts it after the header).
 (() => { const a = document.querySelector('.la-skip'); if (a) document.body.prepend(a); })();
 // Make Plotly sliders usable from the keyboard: Tab to the slider, then arrow keys, Home and End.
