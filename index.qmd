@@ -21,7 +21,6 @@ listing:
     sort: "date desc"
     template: _listings/shelf.ejs
     date-format: "D MMM YYYY"
-    feed: true
   - id: tools
     contents: "tools/*/index.qmd"
     sort: "added desc"

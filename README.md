@@ -70,6 +70,7 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 | `_includes/analytics.html` | Analytics snippet (Vercel Web Analytics) |
 | `styles.scss`, `styles-dark.scss` | Colours and fonts, light and dark |
 | `vercel.json`, `scripts/vercel-build.sh` | Vercel build: installs Quarto, renders to `_site/` |
+| `scripts/feed.lua` | Writes the RSS feed (`index.xml`) after each render: every notebook plus every link card, linking to where each piece lives |
 
 ## Hosting on Vercel
 
