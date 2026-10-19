@@ -6,10 +6,13 @@ const counts = {};
 for (const item of items) for (const t of (item.categories || [])) counts[t] = (counts[t] || 0) + 1;
 const tags = Object.keys(counts).sort();
 %>
-<div class="la-tags quarto-listing-category" role="group" aria-label="Filter by tag">
-<button type="button" class="quarto-listing-category-title" aria-pressed="true">all</button>
-<% for (const t of tags) { %><button type="button" class="category" aria-pressed="false" data-category="<%- utils.b64encode(t) %>">#<%= t %></button>
+<div class="la-tags">
+<label for="la-tag-filter">Filter by tag</label>
+<select id="la-tag-filter">
+<option value="">All topics (<%= items.length %>)</option>
+<% for (const t of tags) { %><option value="<%- utils.b64encode(t) %>">#<%= t %> (<%= counts[t] %>)</option>
 <% } %>
+</select>
 </div>
 <div class="la-shelf list">
 <% for (const item of items) {

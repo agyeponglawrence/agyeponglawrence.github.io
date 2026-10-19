@@ -121,12 +121,14 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .la-section-head h2 { margin: 0; font-size: 2rem; border-bottom: 0; padding-bottom: 0; }
 .la-section-head p { margin: 0; }
 .la-section-link { font-family: $font-family-monospace; font-size: 14px; color: var(--la-gold-text); text-decoration: none; &:hover { text-decoration: underline; } }
-.la-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.la-tags button {
-  padding: 6px 13px; border-radius: 999px; border: 1px solid var(--la-line); background: var(--la-card);
+.la-tags { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.la-tags label { font-family: $font-family-monospace; font-size: 13px; color: var(--la-ink2); white-space: nowrap; }
+.la-tags select {
+  appearance: none; -webkit-appearance: none; min-width: 0; max-width: 100%;
+  padding: 7px 36px 7px 14px; border-radius: 999px; border: 1px solid var(--la-line);
+  background: var(--la-card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23D99A1E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 14px center;
   color: var(--la-ink); font-family: $font-family-monospace; font-size: 13px; cursor: pointer;
-  &:hover { border-color: var(--la-gold); }
-  &[aria-pressed="true"] { background: var(--la-ink); color: var(--la-paper); border-color: var(--la-ink); }
+  &:hover, &:focus { border-color: var(--la-gold); }
 }
 .la-shelf { border-top: 1px solid var(--la-line); }
 .la-row {

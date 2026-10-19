@@ -4,7 +4,7 @@ An economist's playground: interactive notebooks where every chart comes with th
 
 ## Add something new
 
-Every piece on the shelf is one folder in `shelf/`. Tags are free: whatever you put in `categories` shows up in the home page's filter bar.
+Every piece on the shelf is one folder in `shelf/`. Tags are free: whatever you put in `categories` shows up in the home page's tag dropdown.
 
 ### 1. A notebook, note or tutorial
 

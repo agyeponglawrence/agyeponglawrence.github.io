@@ -4,6 +4,10 @@ description: "How concentrated Canada's exports are, who carries the new trade, 
 added: 2026-05-27   # newest tool shows on the home page
 where: "dashboard · with TL Economic Intelligence"
 tool-url: https://tleconomicintel.com/hhi/
+image: preview.jpg   # link preview (LinkedIn won't show .webp)
+twitter-card:
+  card-style: summary_large_image
+image-alt: "The dashboard's headline numbers: HHI of 0.48, about 2.1 equivalent partners, and 0.14 once the US is excluded"
 related-tags: [indexes, trade]
 listing:
   id: related
@@ -11,6 +15,7 @@ listing:
     - "../../shelf/*/index.ipynb"
     - "../../shelf/*/index.qmd"
     - "../../shelf/links.yml"
+    - "!../../shelf/_template/*"
   include:
     categories: indexes
   sort: "date desc"

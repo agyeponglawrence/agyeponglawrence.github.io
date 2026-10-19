@@ -1,5 +1,5 @@
 ---
-pagetitle: "Lawrence Agyepong | An economist's playground"
+pagetitle: "An economist's playground"
 description: "Hi, welcome to my playground. Pull up a chair, let's explore some questions and dig into some data."
 page-layout: full
 listing:
