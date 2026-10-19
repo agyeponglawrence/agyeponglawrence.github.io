@@ -5,13 +5,17 @@ project:
     - "shelf/**/*.xlsx"
     - "shelf/**/*.csv"
     - "shelf/**/*.ipynb"
+    - "!shelf/_template/**"
 
 website:
   title: "Lawrence Agyepong"
   description: "Interactive notebooks from an economist who likes to show the working. Every chart comes with the Python and an Excel version."
   site-url: https://agyeponglawrence.com
   favicon: images/favicon.png
+  image: images/lawrence.jpg   # link preview for any page without its own image
   open-graph: true
+  twitter-card:
+    card-style: summary   # small square card; suits the headshot
   navbar:
     left:
       - href: index.qmd#shelf-title

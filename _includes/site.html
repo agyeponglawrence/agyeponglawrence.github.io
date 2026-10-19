@@ -1,5 +1,5 @@
 <script>
-// Site behaviour: hero chart that draws itself, tag-filter button states,
+// Site behaviour: hero chart that draws itself, the tag dropdown,
 // and keeping the tag filter scoped to the shelf.
 (function () {
   const NS = 'http://www.w3.org/2000/svg';
@@ -75,25 +75,26 @@
     fig.querySelector('.la-hero-svg').appendChild(svg);
   }
 
-  function syncTagButtons() {
-    const bar = document.querySelector('.la-tags');
-    if (!bar) return;
-    const update = () => {
-      const active = bar.querySelector('.category.active');
-      bar.querySelectorAll('button').forEach((b) => {
-        const on = active ? b === active : b.classList.contains('quarto-listing-category-title');
-        b.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
+  // Tag dropdown: filter the shelf on change, and follow #category= links from piece pages.
+  function wireTagSelect() {
+    const sel = document.getElementById('la-tag-filter');
+    if (!sel) return;
+    sel.addEventListener('change', () => window.quartoListingCategory && window.quartoListingCategory(sel.value));
+    const fromHash = () => {
+      const m = location.hash.match(/category=([^&]*)/);
+      const want = m ? btoa(encodeURIComponent(decodeURIComponent(m[1]))) : '';
+      if ([...sel.options].some((o) => o.value === want)) sel.value = want;
     };
-    new MutationObserver(update).observe(bar, { subtree: true, attributes: true, attributeFilter: ['class'] });
-    update();
+    window.addEventListener('hashchange', fromHash);
+    window.addEventListener('popstate', fromHash);
+    fromHash();
   }
 
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-hero-src]').forEach((fig) => {
       fetch(fig.dataset.heroSrc).then((r) => (r.ok ? r.text() : Promise.reject())).then((t) => drawHero(fig, t)).catch(() => {});
     });
-    syncTagButtons();
+    wireTagSelect();
   });
 
   // Quarto applies a tag filter to every listing on the page; keep it to the shelf.
