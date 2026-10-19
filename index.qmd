@@ -1,6 +1,6 @@
 ---
 pagetitle: "An economist's playground"
-description: "Hi, welcome to my playground. Pull up a chair, let's explore some questions and dig into some data."
+description: "An economist's playground for open, reproducible analysis: interactive notebooks, data tools and research. Follow the question, check the method, redo it yourself."
 page-layout: full
 listing:
   - id: featured
@@ -30,10 +30,16 @@ listing:
 ---
 
 ::: {.la-welcome}
-Hi, welcome to my playground. I'm Lawrence.<br>
-[Pull up a chair, let's explore some questions and dig into some data.]{.soft}
-
-[Notebooks you can play with, tools you can use, and the files to redo it all yourself.]{.la-welcome-what}
+```{=html}
+<p class="la-eyebrow">Economics · data · open methods</p>
+<h1 class="la-promise">An economist's playground for open, reproducible analysis.</h1>
+<p class="la-welcome-what">Interactive notebooks, data tools and research. Follow the question, check the method, redo it yourself.</p>
+<div class="la-cta">
+  <a class="la-btn" href="#shelf-title">Browse notebooks</a>
+  <a class="la-btn la-btn-ghost" href="tools/index.html">Data tools →</a>
+</div>
+<p class="la-hello">Hi, I'm Lawrence. Pull up a chair, let's explore some questions and dig into some data.</p>
+```
 :::
 
 ::: {#featured}
@@ -47,7 +53,7 @@ Hi, welcome to my playground. I'm Lawrence.<br>
 :::
 
 ::: {.la-section-head style="margin-top:56px"}
-## Things I've built {#tools-title}
+## Data tools and dashboards {#tools-title}
 
 [All tools →](tools/index.qmd){.la-section-link}
 :::
@@ -62,7 +68,7 @@ Hi, welcome to my playground. I'm Lawrence.<br>
 ::: {.la-hi}
 ```{=html}
 <p class="la-hi-lead">The kettle's on.</p>
-<p class="la-hi-sub">New notebooks and tools in your inbox every couple of weeks, or just say hello.</p>
+<p class="la-hi-sub">New notebooks, data tools and the methods behind them, in your inbox every couple of weeks. Or just say hello.</p>
 <form class="la-hi-form" action="https://ajaypong.substack.com/subscribe" method="get" target="_blank">
   <label for="subscribe-email" class="visually-hidden-label">Your email</label>
   <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>

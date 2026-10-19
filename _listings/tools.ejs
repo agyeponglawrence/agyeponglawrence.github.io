@@ -2,9 +2,11 @@
 <div class="la-tools list">
 <% for (const item of items) { const ext = /^https?:/.test(item.path || ''); %>
 <a class="la-tool" href="<%- item.path %>"<% if (ext) { %> target="_blank" rel="noopener"<% } %> <%= metadataAttrs(item) %>>
-<span class="where"><%= item.where || 'tool' %></span>
+<% if (item.image) { %><img class="shot" src="<%- item.image %>" alt="<%= item['image-alt'] || '' %>" loading="lazy">
+<% } %><span class="where"><%= item.where || 'tool' %></span>
 <span class="name"><%= item.title %></span>
 <span class="desc"><%= item.description %></span>
+<span class="more">See what it answers →</span>
 </a>
 <% } %>
 </div>

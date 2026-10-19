@@ -22,6 +22,8 @@ website:
         text: Notebooks
       - href: tools/index.qmd
         text: Tools
+      - href: research.qmd
+        text: Research
       - href: about.qmd
         text: About
     right:

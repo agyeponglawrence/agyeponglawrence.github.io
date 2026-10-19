@@ -174,6 +174,8 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
   .where { font-family: $font-family-monospace; font-size: 12px; color: var(--la-gold-text); }
   .name { font-family: $headings-font-family; font-size: 1.35rem; font-weight: 700; }
   .desc { color: var(--la-ink2); font-size: 0.95rem; line-height: 1.5; }
+  .shot { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--la-line); margin-bottom: 6px; }
+  .more { font-family: $font-family-monospace; font-size: 13px; color: var(--la-gold-text); margin-top: 2px; }
 }
 
 // About + subscribe band
@@ -197,12 +199,15 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 
 // Welcome line and the short "Say hi" section
 .la-welcome {
-  font-family: $headings-font-family; font-weight: 500; font-size: clamp(1.35rem, 2.6vw, 1.75rem);
-  line-height: 1.35; padding: 36px 0 4px; max-width: 36em; text-wrap: balance;
-  .soft { color: var(--la-ink2); }
+  padding: 40px 0 8px; max-width: 40em;
   p { margin: 0; }
-  .la-welcome-what { display: block; margin-top: 14px; font-family: $font-family-sans-serif; font-weight: 400; font-size: 1.05rem; color: var(--la-ink2); }
+  .la-eyebrow { font-family: $font-family-monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--la-gold-text); }
+  .la-promise { margin: 10px 0 0; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.08; text-wrap: balance; border: 0; }
+  .la-welcome-what { margin-top: 16px; font-size: 1.15rem; color: var(--la-ink2); max-width: 34em; }
+  .la-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .la-hello { margin-top: 26px; font-family: $headings-font-family; font-weight: 500; font-size: 1.15rem; color: var(--la-ink2); }
 }
+.la-btn-ghost { background: transparent; color: var(--la-ink) !important; border: 1px solid var(--la-line); &:hover { border-color: var(--la-ink); } }
 .la-welcome + #featured .la-hero { padding-top: 20px; }
 .la-hi {
   display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; padding: 32px;
@@ -231,6 +236,7 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 .la-papers ul { list-style: none; padding-left: 0; margin: 0; }
 .la-papers li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--la-line); }
 .la-papers .mono { font-size: 12px; color: var(--la-ink2); }
+.la-papers .la-cite { flex-basis: 100%; font-size: 0.88rem; color: var(--la-ink2); line-height: 1.45; }
 
 // Notebook page header (shelf pieces)
 .la-piece-head { padding: 28px 0 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--la-line); margin-bottom: 28px; }
@@ -275,7 +281,6 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 }
 
 // Tools
-.la-tool-soon { border-style: dashed; background: transparent; margin-top: 16px; max-width: 420px; }
 .la-tool-shot {
   display: grid; gap: 14px; margin: 8px 0 20px;
   p { margin: 0; }
