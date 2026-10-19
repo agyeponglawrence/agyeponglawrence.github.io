@@ -68,6 +68,23 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
   &:hover { background: var(--la-ink); color: var(--la-paper) !important; }
 }
 @media (max-width: 991px) { .navbar-nav .nav-link[href*="substack.com"] { display: inline-block; margin: 6px 0; } }
+// Subscribe pill kept in the bar on small screens (added by _includes/site.html), so it isn't hidden in the menu
+.la-sub-mobile {
+  display: none; order: 5; margin-left: 6px; padding: 4px 11px; border-radius: 999px;
+  background: var(--la-gold); color: #17181C !important; font-weight: 600; font-size: 0.85rem; text-decoration: none; white-space: nowrap;
+  &:hover { background: var(--la-ink); color: var(--la-paper) !important; }
+}
+@media (max-width: 991px) { .la-sub-mobile { display: inline-block; } }
+// Phones: make room for the pill (drop the search icon, tighten the bar); the narrowest phones keep it in the menu
+@media (max-width: 430px) {
+  #quarto-header #quarto-search { display: none; }
+  #quarto-header .navbar-toggler { margin-right: 4px !important; padding: 4px 2px; }
+  #quarto-header .navbar-brand { padding-right: 4px; }
+  #quarto-header .navbar-title { font-size: 0.95rem; }
+  .la-sub-mobile { padding: 4px 10px; font-size: 0.8rem; }
+}
+@media (max-width: 389px) { #quarto-header .quarto-navbar-tools { display: none; } }  // theme still follows the phone setting
+@media (max-width: 359px) { .la-sub-mobile { display: none; } }
 .navbar-toggler { border: 0; padding: 4px 6px; &:focus { box-shadow: none; } &:focus-visible { outline: 2px solid var(--la-gold); } }
 @media (max-width: 575px) { .navbar-title { font-size: 1.05rem; } .navbar-brand { margin-right: 0; padding-right: 12px; } }
 
@@ -188,10 +205,19 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 }
 .la-welcome + #featured .la-hero { padding-top: 20px; }
 .la-hi {
-  display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; padding: 32px; max-width: 640px;
+  display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; padding: 32px;
   border-radius: 20px; background: var(--la-gold-soft); border: 1px solid var(--la-line); font-size: 1.05rem;
 }
 @media (max-width: 575px) { .la-hi { padding: 22px; } }
+// Wide screens: words on the left, form and links on the right, so the box spans the page like the sections above
+@media (min-width: 768px) {
+  .la-hi { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 40px; row-gap: 10px; align-items: start; padding: 32px 36px; }
+  .la-hi .la-hi-lead { grid-column: 1; grid-row: 1; }
+  .la-hi .la-hi-sub { grid-column: 1; grid-row: 2; }
+  .la-hi .la-hi-form { grid-column: 2; grid-row: 1; margin: 0; align-self: end; }
+  .la-hi .la-hi-links { grid-column: 2; grid-row: 2; }
+  .la-hi .la-hi-form input { flex: 1 1 200px; }
+}
 .la-hi p { margin: 0; }
 .la-hi-lead { font-family: $headings-font-family; font-size: 1.5rem; font-weight: 700; }
 .la-hi-sub { color: var(--la-ink2); }
