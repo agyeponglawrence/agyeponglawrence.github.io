@@ -55,11 +55,12 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 
 | Path | What it is |
 |---|---|
-| `index.qmd` | Home page: featured piece, shelf, tools, about |
+| `index.qmd` | Home page: opening, featured piece, shelf, tools, subscribe |
 | `shelf/` | One folder per piece, plus `links.yml` for link cards |
 | `shelf/_template/` | Starting point for a new piece |
 | `tools/` | Tools page and one folder per tool |
-| `about.qmd` | About page, papers, CV |
+| `about.qmd` | About page |
+| `research.qmd` | Research page: published papers |
 | `_listings/` | Templates for the hero, shelf and tools sections |
 | `_includes/site.html` | Hero chart animation and tag filter behaviour |
 | `styles.scss`, `styles-dark.scss` | Colours and fonts, light and dark |

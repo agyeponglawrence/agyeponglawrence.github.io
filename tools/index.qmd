@@ -1,5 +1,6 @@
 ---
-title: "Things I've built"
+title: "Data tools and dashboards"
+description: "Tools you can use straight away, each with a page on what it answers, where the data comes from, and the notebooks that use it."
 listing:
   id: all-tools
   contents: "*/index.qmd"
@@ -9,12 +10,3 @@ listing:
 
 ::: {#all-tools}
 :::
-
-```{=html}
-<a class="la-tool la-tool-soon" href="https://ajaypong.substack.com" target="_blank" rel="noopener">
-<span class="where">on the workbench</span>
-<span class="name">Something new is coming</span>
-<span class="desc">Subscribe to hear when it's ready.</span>
-<span class="where">Subscribe →</span>
-</a>
-```
