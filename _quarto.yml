@@ -1,6 +1,7 @@
 project:
   type: website
   output-dir: _site
+  post-render: scripts/feed.lua   # writes the RSS feed, index.xml
   resources:
     - "shelf/**/*.xlsx"
     - "shelf/**/*.csv"
@@ -62,10 +63,12 @@ format:
     code-summary: "Show code"
     code-tools: false
     highlight-style: github
+    include-in-header:
+      - text: '<link rel="alternate" type="application/rss+xml" title="Lawrence Agyepong" href="/index.xml">'
     include-before-body:
       - _includes/skip.html
     include-after-body:
-      - analytics.html
+      - _includes/analytics.html
       - _includes/site.html
 
 execute:

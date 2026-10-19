@@ -3,12 +3,11 @@ title: "Export Concentration Intelligence Tool"
 description: "How concentrated Canada's exports are, who carries the new trade, and what moved it."
 added: 2026-05-27   # newest tool shows on the home page
 where: "dashboard · with TL Economic Intelligence"
-tool-url: https://tleconomicintel.com/hhi/
+tool-url: https://tleconomicintel.com/hhi/   # the "Open the tool" button
 image: preview.jpg   # link preview (LinkedIn won't show .webp)
 twitter-card:
   card-style: summary_large_image
 image-alt: "The dashboard's headline numbers: HHI of 0.48, about 2.1 equivalent partners, and 0.14 once the US is excluded"
-related-tags: [indexes, trade]
 listing:
   id: related
   contents:
@@ -29,7 +28,7 @@ listing:
 ![](screenshot-history.webp){fig-alt="Ten years of Canada's export concentration, with key trade events marked on the line"}
 :::
 
-[Open the tool ↗](https://tleconomicintel.com/hhi/){.la-btn target="_blank"}
+[Open the tool ↗]({{< meta tool-url >}}){.la-btn target="_blank" rel="noopener"}
 
 ## What it answers
 
