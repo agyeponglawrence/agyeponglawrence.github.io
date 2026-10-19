@@ -65,7 +65,7 @@ format:
     include-before-body:
       - _includes/skip.html
     include-after-body:
-      - analytics.html
+      - _includes/analytics.html
       - _includes/site.html
 
 execute:

@@ -40,6 +40,7 @@ Add a block to `shelf/links.yml`:
 
 ```yaml
 - title: "Same shock, different pain"
+  description: "One line for the shelf."
   date: 2026-07-14
   path: https://ajaypong.substack.com/p/same-shock-different-pain
   where: Substack
@@ -61,10 +62,13 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 | `tools/` | Tools page and one folder per tool |
 | `about.qmd` | About page |
 | `research.qmd` | Research page: published papers |
-| `_listings/` | Templates for the hero, shelf and tools sections |
-| `_includes/site.html` | Hero chart animation and tag filter behaviour |
+| `_listings/` | Templates for the hero, shelf, tools and related-notebooks lists |
+| `_filters/piece.lua` | Builds each piece's key-points box and Replicate section |
+| `_includes/title-block.html` | Header on piece pages: kicker, title, tags, share bar |
+| `_includes/site.html` | Hero chart, tag dropdown, share buttons, navbar highlight, mobile Subscribe pill, keyboard-friendly chart sliders |
+| `_includes/skip.html` | "Skip to content" link |
+| `_includes/analytics.html` | Analytics snippet (Vercel Web Analytics) |
 | `styles.scss`, `styles-dark.scss` | Colours and fonts, light and dark |
-| `analytics.html` | Analytics snippet (Vercel Web Analytics) |
 | `vercel.json`, `scripts/vercel-build.sh` | Vercel build: installs Quarto, renders to `_site/` |
 
 ## Hosting on Vercel

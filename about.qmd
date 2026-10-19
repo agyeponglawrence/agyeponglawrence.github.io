@@ -31,6 +31,6 @@ Here I play with data that catches my eye, and share the notebooks so you can to
 
 Rebuilt one of my notebooks, or got a different number? I'd love to hear from you: **[agyeponglawrence101@gmail.com](mailto:agyeponglawrence101@gmail.com)**
 
-## Research {.la-papers-head}
+## Research
 
 I've published on poverty, household spending and farm credit in Ghana. [See my papers →](research.qmd)

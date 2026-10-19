@@ -88,19 +88,12 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .navbar-toggler { border: 0; padding: 4px 6px; &:focus { box-shadow: none; } &:focus-visible { outline: 2px solid var(--la-gold); } }
 @media (max-width: 575px) { .navbar-title { font-size: 1.05rem; } .navbar-brand { margin-right: 0; padding-right: 12px; } }
 
-// Buttons and chips
+// Buttons and tags
 .la-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   padding: 11px 20px; border-radius: 10px; border: 0;
   background: var(--la-gold); color: #17181C !important; font-weight: 600; text-decoration: none;
   &:hover { background: var(--la-ink); color: var(--la-paper) !important; }
-}
-.la-chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 7px 14px; border-radius: 999px; border: 1px solid var(--la-line);
-  background: var(--la-card); color: var(--la-ink) !important; text-decoration: none;
-  font-family: $font-family-monospace; font-size: 13px;
-  &:hover { border-color: var(--la-gold); }
 }
 .la-tag {
   display: inline-block; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--la-line);
@@ -114,7 +107,7 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 .la-hero-text { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
 .la-hero-text h1 { margin: 0; font-size: clamp(2.1rem, 4.6vw, 3.4rem); line-height: 1.05; }
 .la-hero-text .lede { margin: 0; font-size: 1.15rem; line-height: 1.55; color: var(--la-ink2); max-width: 34em; }
-.la-tagline { font-family: $font-family-monospace; font-size: 13px; color: var(--la-ink2); margin: 0; }
+.la-files { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 24px; }
 .la-underline { position: relative; white-space: nowrap; }
 .la-underline svg { position: absolute; left: -2%; bottom: -0.32em; width: 104%; height: 0.4em; overflow: visible; }
 .la-hero-chart {
@@ -177,25 +170,13 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
   .shot { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--la-line); margin-bottom: 6px; }
   .more { font-family: $font-family-monospace; font-size: 13px; color: var(--la-gold-text); margin-top: 2px; }
 }
-
-// About + subscribe band
-.la-about { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; padding: 24px 0 40px; }
-.la-about > div { flex: 1 1 380px; min-width: 0; }
-.la-subscribe {
-  padding: 26px; border-radius: 20px; background: #17181C; color: #ECEAE4;
-  h3 { color: #F0B43C; margin: 0 0 6px; font-size: 1.5rem; }
-  p { opacity: .85; margin: 0 0 14px; }
-  form { display: flex; flex-wrap: wrap; gap: 10px; }
-  input { flex: 1 1 200px; min-width: 0; padding: 11px 14px; border-radius: 10px; border: 1px solid #3A3D45; background: #0E0F12; color: #ECEAE4; }
+// Tool pages: screenshots and the source line
+.la-tool-shot {
+  display: grid; gap: 14px; margin: 8px 0 20px;
+  p { margin: 0; }
+  img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--la-line); }
 }
-
-// Notebook pages
-.quarto-title-meta-heading { font-family: $font-family-monospace; }
-details.code-fold > summary, .code-fold summary { font-family: $font-family-monospace; font-size: 13px; color: var(--la-gold-text); }
-.la-files { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 24px; }
-.la-callout { border: 1px dashed var(--la-gold); border-radius: 10px; padding: 10px 14px; font-family: $font-family-monospace; font-size: 13px; color: var(--la-gold-text); }
-
-.visually-hidden-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.la-small { font-size: 0.85rem; color: var(--la-ink2); }
 
 // Welcome line and the short "Say hi" section
 .la-welcome {
@@ -224,6 +205,7 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
   .la-hi .la-hi-form input { flex: 1 1 200px; }
 }
 .la-hi p { margin: 0; }
+.visually-hidden-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .la-hi-lead { font-family: $headings-font-family; font-size: 1.5rem; font-weight: 700; }
 .la-hi-sub { color: var(--la-ink2); }
 .la-hi-links { font-size: 0.95rem; color: var(--la-ink2); a { color: var(--la-gold-text); } }
@@ -232,13 +214,14 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
   input { flex: 0 1 280px; min-width: 0; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--la-line); background: var(--la-card); color: var(--la-ink); }
 }
 
-// About page
+// Research page
 .la-papers ul { list-style: none; padding-left: 0; margin: 0; }
 .la-papers li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--la-line); }
 .la-papers .mono { font-size: 12px; color: var(--la-ink2); }
 .la-papers .la-cite { flex-basis: 100%; font-size: 0.88rem; color: var(--la-ink2); line-height: 1.45; }
 
-// Notebook page header (shelf pieces)
+// Notebook pages (shelf pieces): header and folded code
+details.code-fold > summary, .code-fold summary { font-family: $font-family-monospace; font-size: 13px; color: var(--la-gold-text); }
 .la-piece-head { padding: 28px 0 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--la-line); margin-bottom: 28px; }
 .la-piece-head h1.title { margin: 0; font-size: clamp(2rem, 4.2vw, 2.9rem); line-height: 1.08; }
 .la-piece-desc { margin: 0; font-size: 1.15rem; color: var(--la-ink2); }
@@ -246,7 +229,6 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 .la-piece-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-bottom: 16px; }
 .la-piece-meta .la-tag { text-decoration: none; }
 .la-piece-meta .la-tag:hover { border-color: var(--la-gold); color: var(--la-ink); }
-.la-piece-meta .la-chip { padding: 4px 12px; font-size: 12px; }
 
 // Key points, sharing and Replicate (shelf pieces)
 .la-keypoints {
@@ -279,14 +261,6 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
   .name { font-weight: 600; }
   .what { font-size: 0.9rem; color: var(--la-ink2); }
 }
-
-// Tools
-.la-tool-shot {
-  display: grid; gap: 14px; margin: 8px 0 20px;
-  p { margin: 0; }
-  img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--la-line); }
-}
-.la-small { font-size: 0.85rem; color: var(--la-ink2); }
 
 // Footer: one quiet line
 .nav-footer {
