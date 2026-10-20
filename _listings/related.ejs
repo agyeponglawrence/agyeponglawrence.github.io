@@ -1,10 +1,10 @@
 ```{=html}
 <div class="la-shelf list">
-<% for (const item of items) { const isLink = /^https?:/.test(item.path || ''); const nb = isLink ? String(item.nb || '').replace(/^NB-/, 'No. ') : (item.nb || ''); %>
+<% for (const item of items) { const isLink = /^https?:/.test(item.path || ''); const nb = (isLink || item.source) ? String(item.nb || '').replace(/^NB-/, 'No. ') : (item.nb || ''); %>
 <a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener" aria-label="<%= item.title %> (opens on <%= item.where || 'another site' %>)"<% } %> <%= metadataAttrs(item) %>>
 <span class="nb"><%= nb %></span>
 <span><span class="title"><%= item.title %></span><span class="meta"><%= item.date %></span></span>
-<span class="badge-type"><%= isLink ? 'link ↗' : (item.type || 'notebook') %></span>
+<span class="badge-type"><%= isLink ? 'link ↗' : item.source ? 'summary' : (item.type || 'notebook') %></span>
 </a>
 <% } %>
 </div>

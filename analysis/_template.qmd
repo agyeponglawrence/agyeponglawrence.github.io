@@ -1,0 +1,22 @@
+---
+# A summary page for a piece published elsewhere. Copy this file to analysis/<short-name>.qmd,
+# fill it in, and delete that piece's entry from shelf/analysis.yml (this page replaces it).
+# Files starting with _ are never published, so this template stays off the site.
+title: "Remove UK-bound metals and the record low in export concentration disappears"
+description: "One line: the question and the answer."
+date: 2026-10-08
+nb: NB-005                    # shows as No. 005
+where: TL Economic Intelligence
+source: https://tleconomicintel.substack.com/p/remove-uk-bound-metals-and-canadas   # the full piece
+categories: [trade, indexes]
+image: chart.png              # optional: link preview for LinkedIn and X (put the file in analysis/)
+key-points:
+  - "Three or four findings, each one sentence, with the number in it."
+  - "Write them so someone who reads only these knows what you found."
+  - "The last one can be the caveat or the open question."
+---
+
+![The chart's message as a sentence, for people who can't see it](chart.png){fig-alt="Describe what the chart shows: the axes, the lines and the takeaway."}
+
+Optional: a paragraph or two on why it matters or how you measured it. The page ends with a
+button to the full piece and the subscribe box, so there's no need to add either.

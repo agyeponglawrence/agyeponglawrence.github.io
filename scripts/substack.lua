@@ -1,7 +1,7 @@
 -- Pre-render: pulls posts from Lawrence's Substack RSS feed into shelf/substack.yml
 -- (generated, not committed), which the Analysis lists and the site feed read alongside
 -- shelf/analysis.yml. A post that already has an entry in analysis.yml (same link) is
--- skipped, so a hand-written entry with tags and an NB number always wins.
+-- skipped, as is one with a summary page in analysis/, so a hand-written entry always wins.
 -- If the feed can't be fetched, the last good file is kept and the build carries on.
 
 local FEED = os.getenv('SUBSTACK_FEED') or 'https://ajaypong.substack.com/feed'
@@ -55,6 +55,14 @@ end
 
 local taken = {}
 for url in (read('shelf/analysis.yml') or ''):gmatch('path:%s*(%S+)') do taken[key(url)] = true end
+-- ...and so does a post with a summary page in analysis/ (its `source:` is the post's link)
+local ok_dir, files = pcall(pandoc.system.list_directory, 'analysis')
+for _, name in ipairs(ok_dir and files or {}) do
+  if name:match('%.qmd$') and not name:match('^_') then
+    local src = (read('analysis/' .. name) or ''):match('\nsource:%s*["\']?([^"\'%s]+)')
+    if src then taken[key(src)] = true end
+  end
+end
 
 local out, n = {}, 0
 for item in body:gmatch('<item>(.-)</item>') do

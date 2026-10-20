@@ -4,7 +4,7 @@
 $if(subtitle)$<p class="la-piece-desc">$subtitle$</p>$else$$if(description)$<p class="la-piece-desc">$description$</p>$endif$$endif$
 $if(note)$<p class="la-piece-note">$note$</p>$endif$
 <div class="la-piece-meta">
-$for(categories)$<a class="la-tag" href="/notebooks.html#category=$categories$">#$categories$</a>$endfor$
+$for(categories)$<a class="la-tag" href="$if(tag-page)$$tag-page$$else$/notebooks.html$endif$#category=$categories$">#$categories$</a>$endfor$
 </div>
 <div class="la-share" role="group" aria-label="Share this piece">
 <span class="la-share-label">Share</span>

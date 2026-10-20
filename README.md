@@ -7,7 +7,7 @@ An economist's playground: analysis, data tools and research, plus interactive n
 There are two kinds of piece, sorted by where they live:
 
 - **Notebooks** live on this site: one folder in `shelf/` each. They show on the Notebooks page. Until the first one is published, the home page hides its Notebooks section and the navbar leaves out the Notebooks link; when you publish the first, add the link back in `_quarto.yml` (the spot is marked).
-- **Analysis** lives elsewhere (Substack, TL Economic Intelligence, LinkedIn). It shows on the Analysis page. Posts on your own Substack appear there automatically; everything else is one entry in `shelf/analysis.yml` each.
+- **Analysis** lives elsewhere (Substack, TL Economic Intelligence, LinkedIn). It shows on the Analysis page. Posts on your own Substack appear there automatically; everything else is one entry in `shelf/analysis.yml` each. A piece can also get a short **summary page** on this site (see 3 below), so readers get the findings without leaving.
 
 The home page shows the newest three of each. Tags are free: whatever you put in `categories` shows up in that page's tag dropdown.
 
@@ -55,6 +55,8 @@ Same as above, without Git: open `shelf/` on GitHub, choose **Add file → Uploa
   categories: [inflation, regional]
 ```
 
+**A summary page** (recommended for your best pieces): copy `analysis/_template.qmd` to `analysis/<short-name>.qmd`, fill in the key points, add a chart image next to it, and delete the piece's entry from `shelf/analysis.yml` (the page replaces it, and the listing row then opens the page instead of the other site). The page gets the share bar, a "Read the full piece" button and the subscribe box automatically, and shows in the RSS feed. For a post on your own Substack, `source:` is the post's link, which stops the automatic import from listing it twice.
+
 ### 4. A tool
 
 Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (see `tools/README.md`). Each tool gets its own page with a screenshot, what it answers, an "Open the tool" button and related pieces; the newest one shows on the home page.
@@ -65,6 +67,7 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 |---|---|
 | `index.qmd` | Home page: opening, featured piece, newest analysis and notebooks, tools, subscribe |
 | `notebooks.qmd` | Notebooks page: every notebook in `shelf/`, with a tag filter |
+| `analysis/` | Summary pages for pieces published elsewhere; `_template.qmd` is the starting point |
 | `analysis.qmd` | Analysis page: every piece in `shelf/analysis.yml`, with a tag filter |
 | `shelf/` | One folder per notebook |
 | `shelf/analysis.yml` | Analysis published elsewhere, written by hand |

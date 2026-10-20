@@ -1,8 +1,9 @@
 -- Post-render: writes the RSS feed (index.xml) for the shelf.
 -- Quarto's own listing feed points link cards at the home page and picks up the tool
 -- page, so the feed is built here instead: every notebook in shelf/*/ plus every analysis
--- piece (shelf/analysis.yml and the Substack posts in shelf/substack.yml), newest first,
--- each linking to where the piece actually lives.
+-- piece (summary pages in analysis/, shelf/analysis.yml and the Substack posts in
+-- shelf/substack.yml), newest first. Summaries link to their page here; the rest link to
+-- where the piece lives.
 
 local stringify = pandoc.utils.stringify
 local sys = pandoc.system
@@ -53,6 +54,15 @@ for _, file in ipairs({ 'shelf/analysis.yml', 'shelf/substack.yml' }) do
   if links then
     local indented = links:gsub('([^\n]*)', '  %1')
     for _, m in ipairs(meta_of('items:\n' .. indented).items or {}) do add(m, str(m.path)) end
+  end
+end
+
+-- Summary pages: analysis/<name>.qmd ("_" files are never published)
+local ok_dir, files = pcall(sys.list_directory, 'analysis')
+for _, name in ipairs(ok_dir and files or {}) do
+  if name:match('%.qmd$') and not name:match('^[_.]') then
+    local yaml = (read('analysis/' .. name) or ''):match('^%-%-%-\n(.-)\n%-%-%-')
+    if yaml then add(meta_of(yaml), base .. 'analysis/' .. name:gsub('%.qmd$', '.html')) end
   end
 end
 

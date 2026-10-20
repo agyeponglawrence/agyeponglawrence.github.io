@@ -15,6 +15,8 @@ listing:
     date-format: "D MMM YYYY"
   - id: analysis-latest
     contents:
+      - "analysis/*.qmd"
+      - "!analysis/_*"
       - "shelf/analysis.yml"
       - "shelf/substack.yml"
     sort: "date desc"
