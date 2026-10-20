@@ -3,7 +3,9 @@ title: "Analysis"
 description: "Published on Substack, TL Economic Intelligence and LinkedIn."
 listing:
   id: analysis
-  contents: "shelf/analysis.yml"
+  contents:
+    - "shelf/analysis.yml"
+    - "shelf/substack.yml"
   sort: "date desc"
   template: _listings/shelf.ejs
   template-params:

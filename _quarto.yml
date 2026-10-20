@@ -1,7 +1,8 @@
 project:
   type: website
   output-dir: _site
-  post-render: scripts/feed.lua   # writes the RSS feed, index.xml
+  pre-render: scripts/substack.lua   # pulls new Substack posts into shelf/substack.yml
+  post-render: scripts/feed.lua      # writes the RSS feed, index.xml
   resources:
     - "shelf/**/*.xlsx"
     - "shelf/**/*.csv"

@@ -14,7 +14,9 @@ listing:
     template: _listings/hero.ejs
     date-format: "D MMM YYYY"
   - id: analysis-latest
-    contents: "shelf/analysis.yml"
+    contents:
+      - "shelf/analysis.yml"
+      - "shelf/substack.yml"
     sort: "date desc"
     max-items: 3
     template: _listings/shelf.ejs
