@@ -1,12 +1,12 @@
 # agyeponglawrence.com
 
-An economist's playground: interactive notebooks where every chart comes with the Python and an Excel version. Built with [Quarto](https://quarto.org) and hosted on [Vercel](https://vercel.com). Every push to `main` goes live; every pull request gets its own preview link.
+An economist's playground: analysis, data tools and research, plus interactive notebooks where every chart comes with the Python and an Excel version. Built with [Quarto](https://quarto.org) and hosted on [Vercel](https://vercel.com). Every push to `main` goes live; every pull request gets its own preview link.
 
 ## Add something new
 
 There are two kinds of piece, sorted by where they live:
 
-- **Notebooks** live on this site: one folder in `shelf/` each. They show on the Notebooks page.
+- **Notebooks** live on this site: one folder in `shelf/` each. They show on the Notebooks page. Until the first one is published, the home page hides its Notebooks section and the navbar leaves out the Notebooks link; when you publish the first, add the link back in `_quarto.yml` (the spot is marked).
 - **Analysis** lives elsewhere (Substack, TL Economic Intelligence, LinkedIn). It shows on the Analysis page. Posts on your own Substack appear there automatically; everything else is one entry in `shelf/analysis.yml` each.
 
 The home page shows the newest three of each. Tags are free: whatever you put in `categories` shows up in that page's tag dropdown.
@@ -57,7 +57,7 @@ Same as above, without Git: open `shelf/` on GitHub, choose **Add file → Uploa
 
 ### 4. A tool
 
-Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (see `tools/README.md`). Each tool gets its own page with a screenshot, what it answers, an "Open the tool" button and related notebooks; the newest one shows on the home page.
+Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (see `tools/README.md`). Each tool gets its own page with a screenshot, what it answers, an "Open the tool" button and related pieces; the newest one shows on the home page.
 
 ## How it's organised
 

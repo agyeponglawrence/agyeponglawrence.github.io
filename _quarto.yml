@@ -11,7 +11,7 @@ project:
 
 website:
   title: "Lawrence Agyepong"
-  description: "Interactive notebooks from an economist who likes to show the working. Every chart comes with the Python and an Excel version."
+  description: "Analysis, data tools and research from an economist who likes to show the working."
   site-url: https://agyeponglawrence.com
   favicon: images/favicon.png
   image: images/lawrence.jpg   # link preview for any page without its own image
@@ -20,8 +20,7 @@ website:
     card-style: summary   # small square card; suits the headshot
   navbar:
     left:
-      - href: notebooks.qmd
-        text: Notebooks
+      # Notebooks (notebooks.qmd) joins the bar once the first one is in shelf/
       - href: analysis.qmd
         text: Analysis
       - href: tools/index.qmd
