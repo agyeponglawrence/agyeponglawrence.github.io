@@ -1,7 +1,7 @@
 -- Post-render: writes the RSS feed (index.xml) for the shelf.
 -- Quarto's own listing feed points link cards at the home page and picks up the tool
 -- page, so the feed is built here instead: every notebook in shelf/*/ plus every link
--- card in shelf/links.yml, newest first, each linking to where the piece actually lives.
+-- piece in shelf/analysis.yml, newest first, each linking to where the piece actually lives.
 
 local stringify = pandoc.utils.stringify
 local sys = pandoc.system
@@ -47,7 +47,7 @@ local function add(m, link)
 end
 
 -- Link cards
-local links = read('shelf/links.yml')
+local links = read('shelf/analysis.yml')
 if links then
   local indented = links:gsub('([^\n]*)', '  %1')
   for _, m in ipairs(meta_of('items:\n' .. indented).items or {}) do add(m, str(m.path)) end

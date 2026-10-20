@@ -141,6 +141,7 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
   &:hover, &:focus { border-color: var(--la-gold); }
 }
 .la-shelf { border-top: 1px solid var(--la-line); }
+.la-empty { margin: 0; padding: 18px 10px; border-bottom: 1px solid var(--la-line); color: var(--la-ink2); a { color: var(--la-gold-text); } }
 .la-row {
   display: grid; grid-template-columns: 78px minmax(0, 1fr) auto; gap: 18px; align-items: center;
   padding: 15px 10px; border-bottom: 1px solid var(--la-line); border-radius: 8px;

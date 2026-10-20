@@ -1,0 +1,15 @@
+---
+title: "Analysis"
+description: "Published on Substack, TL Economic Intelligence and LinkedIn."
+listing:
+  id: analysis
+  contents: "shelf/analysis.yml"
+  sort: "date desc"
+  template: _listings/shelf.ejs
+  template-params:
+    filter: true
+  date-format: "D MMM YYYY"
+---
+
+::: {#analysis}
+:::

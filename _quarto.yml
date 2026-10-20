@@ -19,8 +19,10 @@ website:
     card-style: summary   # small square card; suits the headshot
   navbar:
     left:
-      - href: index.qmd#shelf-title
+      - href: notebooks.qmd
         text: Notebooks
+      - href: analysis.qmd
+        text: Analysis
       - href: tools/index.qmd
         text: Tools
       - href: research.qmd

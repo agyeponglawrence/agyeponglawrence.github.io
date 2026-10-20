@@ -13,7 +13,7 @@ listing:
   contents:
     - "../../shelf/*/index.ipynb"
     - "../../shelf/*/index.qmd"
-    - "../../shelf/links.yml"
+    - "../../shelf/analysis.yml"
     - "!../../shelf/_template/*"
   include:
     categories: indexes

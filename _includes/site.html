@@ -97,11 +97,13 @@
     wireTagSelect();
   });
 
-  // Quarto applies a tag filter to every listing on the page; keep it to the shelf.
+  // Quarto applies a tag filter to every listing on the page; keep it to the one with the tag dropdown.
   window.addEventListener('load', () => {
     const lists = window['quarto-listings'] || {};
+    const sel = document.getElementById('la-tag-filter');
+    const keep = sel && sel.closest('[id^="listing-"]');
     for (const id of Object.keys(lists)) {
-      if (id !== 'listing-shelf') {
+      if (!keep || id !== keep.id) {
         try { lists[id].filter(); } catch (e) {}
         delete lists[id];
       }
@@ -184,7 +186,7 @@
 // Gold underline on the navbar link for the section you're in (notebook pages and tool pages included).
 (() => {
   const path = location.pathname;
-  const pick = /\/shelf\//.test(path) ? 'shelf-title' : /\/tools\//.test(path) ? 'tools/index' : /\/research/.test(path) ? 'research' : /\/about/.test(path) ? 'about' : null;
+  const pick = /\/(shelf\/|notebooks)/.test(path) ? 'notebooks' : /\/analysis/.test(path) ? 'analysis' : /\/tools\//.test(path) ? 'tools/index' : /\/research/.test(path) ? 'research' : /\/about/.test(path) ? 'about' : null;
   if (!pick) return;
   document.querySelectorAll('.navbar-nav .nav-link').forEach(a => {
     if ((a.getAttribute('href') || '').includes(pick)) { a.classList.add('la-current'); a.setAttribute('aria-current', 'page'); }
