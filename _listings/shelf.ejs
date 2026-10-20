@@ -2,7 +2,7 @@
 <%
 // One list of pieces: notebooks (shelf/*/) or analysis (shelf/analysis.yml).
 // template-params: `filter: true` adds the tag dropdown, built from whatever tags exist;
-// `empty` is the line shown while the list has nothing in it.
+// `empty` is the line shown while the list has nothing in it, with an optional `empty-link` to `empty-href`.
 const params = (typeof templateParams !== 'undefined' && templateParams) || {};
 const counts = {};
 for (const item of items) for (const t of (item.categories || [])) counts[t] = (counts[t] || 0) + 1;
@@ -18,15 +18,17 @@ const tags = Object.keys(counts).sort();
 </select>
 </div>
 <% } %>
-<div class="la-shelf list">
-<% if (!items.length && params.empty) { %><p class="la-empty"><%- params.empty %></p><% } %>
+<div class="la-shelf list<%= items.length ? '' : ' is-empty' %>">
+<% if (!items.length && params.empty) { %><p class="la-empty"><%= params.empty %><% if (params['empty-link']) { %> <a href="<%- params['empty-href'] %>"><%= params['empty-link'] %></a><% } %></p><% } %>
 <% for (const item of items) {
 const isLink = /^https?:/.test(item.path || '');
 const short = { 'TL Economic Intelligence': 'TLEI' };
 const badge = isLink ? ((short[item.where] || item.where || 'link') + ' ↗') : (item.interactive ? 'interactive' : (item.type || 'notebook'));
+// NB-005 marks a notebook on this site; a piece published elsewhere shows its number as No. 005.
+const nb = isLink ? String(item.nb || '').replace(/^NB-/, 'No. ') : (item.nb || '');
 %>
 <a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener" aria-label="<%= item.title %> (opens on <%= item.where || 'another site' %>)"<% } %> <%= metadataAttrs(item) %>>
-<span class="nb"><%= item.nb || '' %></span>
+<span class="nb"><%= nb %></span>
 <span>
 <span class="title"><%= item.title %></span>
 <% if (item.description) { %><span class="desc"><%= item.description %></span>

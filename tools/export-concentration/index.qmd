@@ -39,7 +39,7 @@ listing:
 
 [Source: Statistics Canada, Table 12-10-0175-01; TL Economic Intelligence calculations.]{.la-small}
 
-## Notebooks that use it
+## Pieces that use it
 
 ::: {#related}
 :::

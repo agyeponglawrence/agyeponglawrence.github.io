@@ -205,6 +205,19 @@
   pill.textContent = 'Subscribe';
   bar.insertBefore(pill, bar.querySelector('#quarto-search, .navbar-toggler'));
 })();
+// On phones the search icon leaves the bar to make room for the pill; offer Search in the menu instead.
+(() => {
+  const list = document.querySelector('#navbarCollapse .navbar-nav');
+  if (!list || !document.getElementById('quarto-search')) return;
+  const li = document.createElement('li');
+  li.className = 'nav-item la-search-item';
+  li.innerHTML = '<button type="button" class="nav-link"><i class="bi bi-search" aria-hidden="true"></i> <span class="menu-text">Search</span></button>';
+  li.querySelector('button').addEventListener('click', () => {
+    const open = document.querySelector('#quarto-search .aa-DetachedSearchButton, #quarto-search button');
+    if (open) open.click();
+  });
+  list.appendChild(li);
+})();
 // Put the skip link first in tab order (Quarto inserts it after the header).
 (() => { const a = document.querySelector('.la-skip'); if (a) document.body.prepend(a); })();
 // Make Plotly sliders usable from the keyboard: Tab to the slider, then arrow keys, Home and End.

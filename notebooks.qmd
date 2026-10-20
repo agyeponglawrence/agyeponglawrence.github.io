@@ -10,7 +10,9 @@ listing:
   template: _listings/shelf.ejs
   template-params:
     filter: true
-    empty: 'The first notebook is on its way. Meanwhile, <a href="analysis.qmd">read the analysis →</a>'
+    empty: "The first notebook is on its way."
+    empty-link: "Meanwhile, read the analysis →"
+    empty-href: /analysis.html
   date-format: "D MMM YYYY"
 ---
 

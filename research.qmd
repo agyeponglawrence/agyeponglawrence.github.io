@@ -1,6 +1,6 @@
 ---
 title: "Research"
-description: "Peer-reviewed papers on poverty, household spending and farm credit in Ghana. For shorter analysis, see the notebooks."
+description: "Peer-reviewed papers on poverty, household spending and farm credit in Ghana. For shorter pieces, see the analysis."
 ---
 
 ::: {.la-papers}
