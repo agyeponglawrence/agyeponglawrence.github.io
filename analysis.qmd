@@ -4,6 +4,8 @@ description: "Published on Substack, TL Economic Intelligence and LinkedIn."
 listing:
   id: analysis
   contents:
+    - "analysis/*.qmd"
+    - "!analysis/_*"
     - "shelf/analysis.yml"
     - "shelf/substack.yml"
   sort: "date desc"

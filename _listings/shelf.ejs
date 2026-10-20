@@ -23,9 +23,9 @@ const tags = Object.keys(counts).sort();
 <% for (const item of items) {
 const isLink = /^https?:/.test(item.path || '');
 const short = { 'TL Economic Intelligence': 'TLEI' };
-const badge = isLink ? ((short[item.where] || item.where || 'link') + ' ↗') : (item.interactive ? 'interactive' : (item.type || 'notebook'));
-// NB-005 marks a notebook on this site; a piece published elsewhere shows its number as No. 005.
-const nb = isLink ? String(item.nb || '').replace(/^NB-/, 'No. ') : (item.nb || '');
+const badge = isLink ? ((short[item.where] || item.where || 'link') + ' ↗') : item.source ? 'summary' : (item.interactive ? 'interactive' : (item.type || 'notebook'));
+// NB-005 marks a notebook on this site; a piece published elsewhere (or a summary of one) shows No. 005.
+const nb = (isLink || item.source) ? String(item.nb || '').replace(/^NB-/, 'No. ') : (item.nb || '');
 %>
 <a class="la-row" href="<%- item.path %>"<% if (isLink) { %> target="_blank" rel="noopener" aria-label="<%= item.title %> (opens on <%= item.where || 'another site' %>)"<% } %> <%= metadataAttrs(item) %>>
 <span class="nb"><%= nb %></span>

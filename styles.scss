@@ -63,16 +63,16 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 }
 .navbar-nav .nav-link.la-current { color: var(--la-gold-text); }
 .navbar-nav .nav-link[href*="substack.com"] {
-  margin: 0 6px; padding: 6px 14px !important; border-radius: 999px;
-  background: var(--la-gold); color: #17181C !important; font-weight: 600;
-  &:hover { background: var(--la-ink); color: var(--la-paper) !important; }
+  margin: 0 6px; padding: 5px 14px !important; border-radius: 999px;
+  border: 1.5px solid var(--la-gold-text); color: var(--la-gold-text) !important; font-weight: 600;
+  &:hover { background: var(--la-gold); border-color: var(--la-gold); color: #17181C !important; }
 }
 @media (max-width: 991px) { .navbar-nav .nav-link[href*="substack.com"] { display: inline-block; margin: 6px 0; } }
 // Subscribe pill kept in the bar on small screens (added by _includes/site.html), so it isn't hidden in the menu
 .la-sub-mobile {
-  display: none; order: 5; margin-left: 6px; padding: 4px 11px; border-radius: 999px;
-  background: var(--la-gold); color: #17181C !important; font-weight: 600; font-size: 0.85rem; text-decoration: none; white-space: nowrap;
-  &:hover { background: var(--la-ink); color: var(--la-paper) !important; }
+  display: none; order: 5; margin-left: 6px; padding: 3px 10px; border-radius: 999px;
+  border: 1.5px solid var(--la-gold-text); color: var(--la-gold-text) !important; font-weight: 600; font-size: 0.85rem; text-decoration: none; white-space: nowrap;
+  &:hover { background: var(--la-gold); border-color: var(--la-gold); color: #17181C !important; }
 }
 @media (max-width: 991px) { .la-sub-mobile { display: inline-block; } }
 // Phones: make room for the pill (drop the search icon, tighten the bar); the narrowest phones keep it in the menu
@@ -260,6 +260,16 @@ details.code-fold > summary, .code-fold summary { font-family: $font-family-mono
 .la-share-label { color: var(--la-ink2); margin-right: 4px; }
 .la-chart-share { margin: 8px 0 4px; justify-content: flex-end; opacity: .8; }
 .la-chart-share:hover, .la-chart-share:focus-within { opacity: 1; }
+.la-read-full { margin: 32px 0 0; }
+// End of a piece: the subscribe ask, after the reader has had the value
+.la-next {
+  margin: 48px 0 8px; padding: 26px 28px; border-radius: 16px;
+  background: var(--la-gold-soft); border: 1px solid var(--la-line);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+  p { margin: 0; }
+  .la-next-lead { font-family: $headings-font-family; font-size: 1.35rem; font-weight: 700; }
+  .la-next-sub { color: var(--la-ink2); margin-bottom: 6px; }
+}
 .la-replicate { margin-top: 48px; padding-top: 8px; border-top: 1px dashed var(--la-line); }
 .la-files-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px; margin: 14px 0 8px; }
 .la-file {

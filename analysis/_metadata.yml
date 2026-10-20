@@ -1,0 +1,10 @@
+# Applies to every summary page in analysis/: a short page on this site for a piece
+# published elsewhere (key points, a chart, and a button to the full piece).
+date-format: "D MMM YYYY"
+tag-page: /analysis.html
+filters:
+  - ../_filters/piece.lua
+format:
+  html:
+    template-partials:
+      - ../_includes/title-block.html

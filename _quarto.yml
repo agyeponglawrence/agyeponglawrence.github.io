@@ -75,3 +75,5 @@ format:
 
 execute:
   freeze: auto
+
+subscribe-url: https://ajaypong.substack.com   # the subscribe box at the end of every piece
