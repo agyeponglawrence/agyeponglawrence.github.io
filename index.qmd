@@ -90,11 +90,7 @@ listing:
 ```{=html}
 <p class="la-hi-lead">The kettle's on.</p>
 <p class="la-hi-sub">New notebooks, data tools and the methods behind them, in your inbox every couple of weeks. Or just say hello.</p>
-<form class="la-hi-form" action="https://ajaypong.substack.com/subscribe" method="get" target="_blank">
-  <label for="subscribe-email" class="visually-hidden-label">Your email</label>
-  <input id="subscribe-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-  <button type="submit" class="la-btn">Subscribe</button>
-</form>
+<iframe class="la-hi-embed" src="https://ajaypong.substack.com/embed" title="Subscribe to my Substack" height="320" loading="lazy"></iframe>
 <p class="la-hi-links">Or find me on
 <a href="https://www.linkedin.com/in/agyeponglawrence" target="_blank" rel="noopener">LinkedIn</a> ·
 <a href="mailto:agyeponglawrence101@gmail.com">Email</a> ·

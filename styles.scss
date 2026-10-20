@@ -198,22 +198,18 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
 @media (max-width: 575px) { .la-hi { padding: 22px; } }
 // Wide screens: words on the left, form and links on the right, so the box spans the page like the sections above
 @media (min-width: 768px) {
-  .la-hi { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 40px; row-gap: 10px; align-items: start; padding: 32px 36px; }
+  .la-hi { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto 1fr; column-gap: 40px; row-gap: 10px; align-items: start; padding: 32px 36px; }
   .la-hi .la-hi-lead { grid-column: 1; grid-row: 1; }
   .la-hi .la-hi-sub { grid-column: 1; grid-row: 2; }
-  .la-hi .la-hi-form { grid-column: 2; grid-row: 1; margin: 0; align-self: end; }
-  .la-hi .la-hi-links { grid-column: 2; grid-row: 2; }
-  .la-hi .la-hi-form input { flex: 1 1 200px; }
+  .la-hi .la-hi-links { grid-column: 1; grid-row: 3; }
+  .la-hi .la-hi-embed { grid-column: 2; grid-row: 1 / span 3; justify-self: end; }
 }
 .la-hi p { margin: 0; }
-.visually-hidden-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .la-hi-lead { font-family: $headings-font-family; font-size: 1.5rem; font-weight: 700; }
 .la-hi-sub { color: var(--la-ink2); }
 .la-hi-links { font-size: 0.95rem; color: var(--la-ink2); a { color: var(--la-gold-text); } }
-.la-hi-form {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 6px 0 4px;
-  input { flex: 0 1 280px; min-width: 0; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--la-line); background: var(--la-card); color: var(--la-ink); }
-}
+// Substack's own subscribe form; it draws its own white card, so it gets a matching border
+.la-hi-embed { display: block; width: 100%; max-width: 480px; height: 320px; border: 1px solid var(--la-line); border-radius: 14px; background: #fff; }
 
 // Research page
 .la-papers ul { list-style: none; padding-left: 0; margin: 0; }
