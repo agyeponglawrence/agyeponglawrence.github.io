@@ -7,7 +7,7 @@ An economist's playground: interactive notebooks where every chart comes with th
 There are two kinds of piece, sorted by where they live:
 
 - **Notebooks** live on this site: one folder in `shelf/` each. They show on the Notebooks page.
-- **Analysis** lives elsewhere (Substack, TL Economic Intelligence, LinkedIn): one entry in `shelf/analysis.yml` each. It shows on the Analysis page.
+- **Analysis** lives elsewhere (Substack, TL Economic Intelligence, LinkedIn). It shows on the Analysis page. Posts on your own Substack appear there automatically; everything else is one entry in `shelf/analysis.yml` each.
 
 The home page shows the newest three of each. Tags are free: whatever you put in `categories` shows up in that page's tag dropdown.
 
@@ -41,7 +41,9 @@ Same as above, without Git: open `shelf/` on GitHub, choose **Add file → Uploa
 
 ### 3. Analysis (a piece published elsewhere)
 
-Add a block to `shelf/analysis.yml`:
+**Your own Substack:** nothing to do. Every build reads the feed at `ajaypong.substack.com/feed` and adds any post that isn't already in `shelf/analysis.yml`, with its title, subtitle, date and link. The site rebuilds once a day (see *Daily rebuild* below), so a new post shows up within a day. To give a Substack post tags or an NB number, add it to `shelf/analysis.yml` with the same link: that entry replaces the automatic one.
+
+**Anything else** (TL Economic Intelligence, LinkedIn): add a block to `shelf/analysis.yml`:
 
 ```yaml
 - title: "Same shock, different pain"
@@ -65,7 +67,8 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 | `notebooks.qmd` | Notebooks page: every notebook in `shelf/`, with a tag filter |
 | `analysis.qmd` | Analysis page: every piece in `shelf/analysis.yml`, with a tag filter |
 | `shelf/` | One folder per notebook |
-| `shelf/analysis.yml` | Analysis published elsewhere |
+| `shelf/analysis.yml` | Analysis published elsewhere, written by hand |
+| `shelf/substack.yml` | Generated at build time from the Substack feed; not committed |
 | `shelf/_template/` | Starting point for a new notebook |
 | `tools/` | Tools page and one folder per tool |
 | `about.qmd` | About page |
@@ -78,11 +81,21 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 | `_includes/analytics.html` | Analytics snippet (Vercel Web Analytics) |
 | `styles.scss`, `styles-dark.scss` | Colours and fonts, light and dark |
 | `vercel.json`, `scripts/vercel-build.sh` | Vercel build: installs Quarto, renders to `_site/` |
+| `scripts/substack.lua` | Before each render: pulls Substack posts into `shelf/substack.yml`. If Substack can't be reached, the build carries on without them |
+| `.github/workflows/daily-rebuild.yml` | Triggers a Vercel rebuild every morning so new Substack posts appear |
 | `scripts/feed.lua` | Writes the RSS feed (`index.xml`) after each render: every notebook plus every analysis piece, linking to where each piece lives |
 
 ## Hosting on Vercel
 
 Vercel runs `scripts/vercel-build.sh`, which downloads Quarto (version pinned in the script) and runs `quarto render`. Notebooks are not re-executed, so no Python is needed on Vercel. To upgrade Quarto, change `QUARTO_VERSION` in the script.
+
+## Daily rebuild
+
+The site only rebuilds when something changes, so a GitHub Action triggers a Vercel rebuild every morning. One-time setup:
+
+1. In Vercel: **Project → Settings → Git → Deploy Hooks**, create a hook named `daily` for branch `main`, and copy its URL.
+2. In GitHub: **Settings → Secrets and variables → Actions → New repository secret**, name `VERCEL_DEPLOY_HOOK`, paste the URL.
+3. Optional check: **Actions → Daily rebuild → Run workflow**, then watch a new deployment start in Vercel.
 
 ## Preview locally
 
