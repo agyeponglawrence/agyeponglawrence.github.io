@@ -4,9 +4,14 @@ An economist's playground: interactive notebooks where every chart comes with th
 
 ## Add something new
 
-Every piece on the shelf is one folder in `shelf/`. Tags are free: whatever you put in `categories` shows up in the home page's tag dropdown.
+There are two kinds of piece, sorted by where they live:
 
-### 1. A notebook, note or tutorial
+- **Notebooks** live on this site: one folder in `shelf/` each. They show on the Notebooks page.
+- **Analysis** lives elsewhere (Substack, TL Economic Intelligence, LinkedIn): one entry in `shelf/analysis.yml` each. It shows on the Analysis page.
+
+The home page shows the newest three of each. Tags are free: whatever you put in `categories` shows up in that page's tag dropdown.
+
+### 1. A notebook (notebook, note or tutorial)
 
 1. Copy `shelf/_template/` to `shelf/<yyyy-mm-short-name>/` (folders starting with `_` are never published).
 2. Edit the first cell of `index.ipynb`. These fields build the page for you:
@@ -34,9 +39,9 @@ Vercel rebuilds the site in a couple of minutes. If the build fails, the old sit
 
 Same as above, without Git: open `shelf/` on GitHub, choose **Add file → Upload files**, drag in the folder's files (name the folder in the path box), and commit to `main`.
 
-### 3. A link card (a piece that lives elsewhere)
+### 3. Analysis (a piece published elsewhere)
 
-Add a block to `shelf/links.yml`:
+Add a block to `shelf/analysis.yml`:
 
 ```yaml
 - title: "Same shock, different pain"
@@ -56,13 +61,16 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 
 | Path | What it is |
 |---|---|
-| `index.qmd` | Home page: opening, featured piece, shelf, tools, subscribe |
-| `shelf/` | One folder per piece, plus `links.yml` for link cards |
-| `shelf/_template/` | Starting point for a new piece |
+| `index.qmd` | Home page: opening, featured piece, newest analysis and notebooks, tools, subscribe |
+| `notebooks.qmd` | Notebooks page: every notebook in `shelf/`, with a tag filter |
+| `analysis.qmd` | Analysis page: every piece in `shelf/analysis.yml`, with a tag filter |
+| `shelf/` | One folder per notebook |
+| `shelf/analysis.yml` | Analysis published elsewhere |
+| `shelf/_template/` | Starting point for a new notebook |
 | `tools/` | Tools page and one folder per tool |
 | `about.qmd` | About page |
 | `research.qmd` | Research page: published papers |
-| `_listings/` | Templates for the hero, shelf, tools and related-notebooks lists |
+| `_listings/` | Templates for the hero, the notebook and analysis lists, tools, and related pieces |
 | `_filters/piece.lua` | Builds each piece's key-points box and Replicate section |
 | `_includes/title-block.html` | Header on piece pages: kicker, title, tags, share bar |
 | `_includes/site.html` | Hero chart, tag dropdown, share buttons, navbar highlight, mobile Subscribe pill, keyboard-friendly chart sliders |
@@ -70,7 +78,7 @@ Copy `tools/export-concentration/` to `tools/<name>/` and edit its `index.qmd` (
 | `_includes/analytics.html` | Analytics snippet (Vercel Web Analytics) |
 | `styles.scss`, `styles-dark.scss` | Colours and fonts, light and dark |
 | `vercel.json`, `scripts/vercel-build.sh` | Vercel build: installs Quarto, renders to `_site/` |
-| `scripts/feed.lua` | Writes the RSS feed (`index.xml`) after each render: every notebook plus every link card, linking to where each piece lives |
+| `scripts/feed.lua` | Writes the RSS feed (`index.xml`) after each render: every notebook plus every analysis piece, linking to where each piece lives |
 
 ## Hosting on Vercel
 

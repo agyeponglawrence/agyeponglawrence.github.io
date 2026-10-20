@@ -1,0 +1,18 @@
+---
+title: "Notebooks"
+description: "Interactive notebooks you can rerun: every chart comes with the Python and an Excel version."
+listing:
+  id: notebooks
+  contents:
+    - "shelf/*/index.ipynb"
+    - "shelf/*/index.qmd"
+  sort: "date desc"
+  template: _listings/shelf.ejs
+  template-params:
+    filter: true
+    empty: 'The first notebook is on its way. Meanwhile, <a href="analysis.qmd">read the analysis →</a>'
+  date-format: "D MMM YYYY"
+---
+
+::: {#notebooks}
+:::

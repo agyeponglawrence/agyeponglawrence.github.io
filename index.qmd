@@ -13,13 +13,21 @@ listing:
     max-items: 1
     template: _listings/hero.ejs
     date-format: "D MMM YYYY"
-  - id: shelf
+  - id: analysis-latest
+    contents: "shelf/analysis.yml"
+    sort: "date desc"
+    max-items: 3
+    template: _listings/shelf.ejs
+    date-format: "D MMM YYYY"
+  - id: notebooks-latest
     contents:
       - "shelf/*/index.ipynb"
       - "shelf/*/index.qmd"
-      - "shelf/links.yml"
     sort: "date desc"
+    max-items: 3
     template: _listings/shelf.ejs
+    template-params:
+      empty: 'The first notebook is on its way. Meanwhile, <a href="analysis.qmd">read the analysis →</a>'
     date-format: "D MMM YYYY"
   - id: tools
     contents: "tools/*/index.qmd"
@@ -34,7 +42,8 @@ listing:
 <h1 class="la-promise">An economist's playground for open, reproducible analysis.</h1>
 <p class="la-welcome-what">Interactive notebooks, data tools and research. Follow the question, check the method, redo it yourself.</p>
 <div class="la-cta">
-  <a class="la-btn" href="#shelf-title">Browse notebooks</a>
+  <a class="la-btn" href="analysis.html">Read the analysis</a>
+  <a class="la-btn la-btn-ghost" href="notebooks.html">Notebooks →</a>
   <a class="la-btn la-btn-ghost" href="tools/index.html">Data tools →</a>
 </div>
 <p class="la-hello">Hi, I'm Lawrence. Pull up a chair, let's explore some questions and dig into some data.</p>
@@ -45,10 +54,21 @@ listing:
 :::
 
 ::: {.la-section-head}
-## Notebooks {#shelf-title}
+## Analysis {#analysis-title}
+
+[All analysis →](analysis.qmd){.la-section-link}
 :::
 
-::: {#shelf}
+::: {#analysis-latest}
+:::
+
+::: {.la-section-head style="margin-top:56px"}
+## Notebooks {#notebooks-title}
+
+[All notebooks →](notebooks.qmd){.la-section-link}
+:::
+
+::: {#notebooks-latest}
 :::
 
 ::: {.la-section-head style="margin-top:56px"}
