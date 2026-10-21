@@ -10,3 +10,12 @@ listing:
 
 ::: {#all-tools}
 :::
+
+```{=html}
+<a class="la-tool la-tool-soon" href="https://ajaypong.substack.com" target="_blank" rel="noopener">
+<span class="where">on the workbench</span>
+<span class="name">Something new is coming</span>
+<span class="desc">Subscribe to hear when it's ready.</span>
+<span class="where">Subscribe →</span>
+</a>
+```

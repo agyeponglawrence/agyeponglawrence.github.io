@@ -175,6 +175,7 @@ h1, h2, h3 { letter-spacing: -0.015em; text-wrap: balance; }
   .shot { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--la-line); margin-bottom: 6px; }
   .more { font-family: $font-family-monospace; font-size: 0.82rem; color: var(--la-gold-text); margin-top: 2px; }
 }
+.la-tool-soon { border-style: dashed; background: transparent; margin-top: 16px; max-width: 420px; }
 // Tool pages: screenshots and the source line
 .la-tool-shot {
   display: grid; gap: 14px; margin: 8px 0 20px;

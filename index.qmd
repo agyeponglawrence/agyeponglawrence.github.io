@@ -1,6 +1,6 @@
 ---
 pagetitle: "An economist's playground"
-description: "An economist's playground for open, reproducible analysis: analysis, data tools and research. Follow the question, check the method, explore the data yourself."
+description: "An economist's playground for open, reproducible analysis: analysis, data tools and research. Follow the question, check the method, redo it yourself."
 page-layout: full
 listing:
   - id: featured
@@ -46,7 +46,7 @@ listing:
   <img src="images/lawrence-avatar.jpg" alt="" width="72" height="72">
   <p>Hi, I'm <a href="about.html">Lawrence Agyepong</a>, an economist with the Government of Saskatchewan's Ministry of Finance. I've published research on poverty and farm credit in Ghana.</p>
 </div>
-<p class="la-welcome-what">Analysis, data tools and research. Follow the question, check the method, explore the data yourself.</p>
+<p class="la-welcome-what">Analysis, data tools and research. Follow the question, check the method, redo it yourself.</p>
 <div class="la-cta">
   <a class="la-btn" href="analysis.html">Read the analysis</a>
   <a class="la-btn la-btn-ghost" href="tools/index.html">Data tools →</a>
