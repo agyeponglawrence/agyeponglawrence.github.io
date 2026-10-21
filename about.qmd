@@ -23,7 +23,7 @@ about:
       href: https://github.com/agyeponglawrence
 ---
 
-I'm an economist with the Government of Saskatchewan's Ministry of Finance, where I build models that show how the economy is doing and what a shock to it would cost.
+I'm an economist with the Government of Saskatchewan's Ministry of Finance. My work is macro forecasting and fiscal impact modelling: tracking where the province's economy is headed, and estimating what a shock, or a policy change, would cost.
 
 I grew up in Ghana and studied economics at the University of Ghana and the University of Saskatchewan.
 

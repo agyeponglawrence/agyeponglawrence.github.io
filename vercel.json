@@ -3,5 +3,11 @@
   "framework": null,
   "installCommand": "echo 'No dependencies to install'",
   "buildCommand": "bash scripts/vercel-build.sh",
-  "outputDirectory": "_site"
+  "outputDirectory": "_site",
+  "redirects": [
+    { "source": "/about", "destination": "/about.html", "statusCode": 301 },
+    { "source": "/research", "destination": "/research.html", "statusCode": 301 },
+    { "source": "/analysis", "destination": "/analysis.html", "statusCode": 301 },
+    { "source": "/notebooks", "destination": "/notebooks.html", "statusCode": 301 }
+  ]
 }
